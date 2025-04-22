@@ -5,8 +5,8 @@ import Link from "next/link";
 const SocialCard = () => {
   return (
     <div className="w-full flex flex-col gap-5">
-      <div className="grid grid-cols-3 gap-4">
-        <div className=" col-span-2 w-full p-4 bg-[#143061] rounded-2xl opacity-80 space-y-4">
+      <div className="grid grid-cols-3 gap-2">
+        <div className=" col-span-2 w-full p-4 bg-[#143061] rounded-2xl space-y-4">
           <div className=" w-full flex justify-between items-start">
             <Mail className="text-white size-10" />
             <Link href="mailto:hiteshsolanki4623@gmail.com">
@@ -20,7 +20,7 @@ const SocialCard = () => {
             </p>
           </div>
         </div>
-        <div className="w-full p-4 bg-[linear-gradient(180deg,#35A5EE,#1264D6)] rounded-2xl opacity-80 space-y-4">
+        <div className="w-full p-4 bg-[linear-gradient(180deg,#35A5EE,#1264D6)] rounded-2xl space-y-4">
           <div className=" w-full flex justify-between items-start">
             <Image
               src="/social/leetcode.png"
@@ -29,7 +29,7 @@ const SocialCard = () => {
               width={50}
               className="text-white size-10"
             />
-            <Link href="https://github.com/Hitesh-s0lanki" target="_blank">
+            <Link href="https://leetcode.com/u/hitesh4623/" target="_blank">
               <ExternalLink className="text-white size-5" />
             </Link>
           </div>
@@ -40,7 +40,7 @@ const SocialCard = () => {
             </p>
           </div>
         </div>
-        <div className=" col-span-3 w-full p-4 bg-[linear-gradient(180deg,#25262F,#0C0D16)] rounded-2xl opacity-80 space-y-4">
+        <div className=" col-span-3 w-full p-4 bg-[linear-gradient(180deg,#25262F,#0C0D16)] rounded-2xl space-y-4">
           <div className=" w-full flex justify-between items-start">
             <Github className="text-white size-10" />
             <Link href="https://github.com/Hitesh-s0lanki" target="_blank">

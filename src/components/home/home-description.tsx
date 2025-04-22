@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomeDescription = () => {
   return (
-    <div className="w-full bg-[linear-gradient(180deg,#2F3D59,#0B1326)] shadow-2xl drop-shadow-2xl rounded-4xl flex flex-col gap-5 justify-center items-center p-5 py-10 mt-[150px]">
+    <div className="w-full bg-[linear-gradient(180deg,#2F3D59,#0B1326)] shadow-2xl drop-shadow-2xl rounded-4xl flex flex-col gap-5 justify-center items-center p-5 py-10 mt-[100px]">
       <div
         className="
     w-[200px] h-[200px]

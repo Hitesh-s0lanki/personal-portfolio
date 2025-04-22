@@ -112,6 +112,43 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  border-radius: 2px;
+  transform: scaleX(0);
+  height: 2.5px;
+  bottom: -7px;
+  left: 10px;
+  background-color: #005ee9;
+  transition: transform 0.25s ease-out;
+}
+
+.link-active::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  border-radius: 2px;
+  transform: scaleX(1);
+  height: 2.5px;
+  bottom: -7px;
+  left: 10px;
+  background-color: #005ee9;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.center::after {
+  transform-origin: bottom center;
+}
+
+.hover-underline-animation.center:hover::after {
+  transform-origin: bottom center;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

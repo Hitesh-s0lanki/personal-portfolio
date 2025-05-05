@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Raleway } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Hitesh Solanki",
@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   icons: "/profile.png",
 };
 
-const font = Poppins({
+const font = Raleway({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["600", "400", "500"],
 });
 
 export default function RootLayout({

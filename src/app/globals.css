@@ -121,7 +121,7 @@
   height: 2.5px;
   bottom: -7px;
   left: 10px;
-  background-color: #005ee9;
+  background-color: #9b4819;
   transition: transform 0.25s ease-out;
 }
 
@@ -134,7 +134,7 @@
   height: 2.5px;
   bottom: -7px;
   left: 10px;
-  background-color: #005ee9;
+  background-color: #9b4819;
 }
 
 .hover-underline-animation:hover::after {
@@ -156,4 +156,46 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  border-radius: 2px;
+  transform: scaleX(0);
+  height: 2.5px;
+  bottom: -7px;
+  left: 10px;
+  background-color: #9b4819;
+  transition: transform 0.25s ease-out;
+}
+
+.link-active::after {
+  content: "";
+  position: absolute;
+  width: 65%;
+  border-radius: 2px;
+  transform: scaleX(1);
+  height: 2.5px;
+  bottom: -7px;
+  left: 10px;
+  background-color: #9b4819;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation.center::after {
+  transform-origin: bottom center;
+}
+
+.hover-underline-animation.center:hover::after {
+  transform-origin: bottom center;
 }

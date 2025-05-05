@@ -6,7 +6,7 @@ const Footer = () => {
       <div className=" w-full flex lg:flex-row md:flex-row flex-col lg:gap-28 md:gap-28 gap-5 px-28 md:px-10 py-5 justify-center md:justify-between lg:justify-between items-center">
         <div className=" flex flex-col gap-1 text-md text-center lg:text-start md:text-start">
           <h1 className=" text-xl font-semibold">Contact Me</h1>
-          <div className="flex gap-4 md:gap-5 lg:gap-5 items-center mt-1">
+          <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-5 lg:gap-5 items-center mt-1">
             <Link href="mailto:people@26ideas.com">
               hiteshsolanki@gmail.com{" "}
             </Link>

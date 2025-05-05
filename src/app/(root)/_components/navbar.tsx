@@ -1,5 +1,6 @@
 "use client";
 
+import { useNavigationSheet } from "@/hooks/use-navigation-sheet";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import Link from "next/link";
@@ -7,6 +8,7 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const { onOpen: onOpenNavigation } = useNavigationSheet();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -17,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className=" w-full p-6 md:px-10 lg:px-40 flex justify-center items-center shadow-sm">
+    <div className=" w-full p-6 md:px-10 lg:px-40 flex justify-end md:justify-center lg:justify-center items-center shadow-sm">
       <div className=" hidden text-lg md:flex lg:flex  gap-8 font-bold items-center">
         {navItems.map((item) => (
           <Link
@@ -33,9 +35,8 @@ const Navbar = () => {
       </div>
 
       <div
-        className="  flex md:hidden lg:hidden bg-background hover:bg-neutral-100 hover:text-neutral-900 p-1 rounded-sm"
-        // onClick={onOpenNavigation}
-      >
+        className="  flex md:hidden lg:hidden bg-background hover:bg-neutral-100 hover:text-neutral-900 p-1 rounded-sm justify-end"
+        onClick={onOpenNavigation}>
         <Menu className="size-8" />
       </div>
     </div>

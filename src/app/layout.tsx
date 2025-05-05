@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Raleway } from "next/font/google";
+import SheetProvider from "@/components/providers/sheet-provider";
 
 export const metadata: Metadata = {
   title: "Hitesh Solanki",
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <SheetProvider />
+        {children}
+      </body>
     </html>
   );
 }

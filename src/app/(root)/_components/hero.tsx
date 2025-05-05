@@ -9,7 +9,7 @@ const Hero = () => {
         <h1 className=" text-4xl md:text-5xl lg:text-5xl font-semibold">
           Hello, <span className=" text-[#9b4819]">I am Hitesh Solanki!</span>
         </h1>
-        <div className="text-xl md:text-[27px] lg:text-[24px] mt-2 px-8 md:px-0 lg:px-0 space-y-2">
+        <div className="text-xl md:text-[27px] lg:text-[24px] mt-2 px-4 md:px-0 lg:px-0 space-y-2">
           <p>
             Results-oriented Software Engineer with experience in designing
             scalable systems, <br /> cloud deployments, and AI-integrated

@@ -84,8 +84,8 @@ const SkillSection: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-10 p-6 md:px-10 lg:px-40 flex flex-col justify-center items-center">
-      <h2 className="section-heading text-5xl font-bold mb-4">
+      className="py-10 p-6 px-4 md:px-10 lg:px-40 flex flex-col justify-center items-center">
+      <h2 className="section-heading text-3xl md:text-5xl lg:text-5xl font-bold mb-4">
         Technical Skills
       </h2>
       <p className="text-muted-foreground mb-12 max-w-2xl text-center">

@@ -22,6 +22,10 @@ const Footer = () => {
               target="_blank">
               9004713782
             </Link>
+            <div className="w-[0.5px] bg-[#FCFCFC] h-4 hidden lg:flex md:flex " />
+            <Link href="/Resume.pdf" target="_blank">
+              View Resume
+            </Link>
           </div>
         </div>
       </div>

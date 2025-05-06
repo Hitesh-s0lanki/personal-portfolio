@@ -28,6 +28,15 @@ export const projectData: Project[] = [
         github: "https://github.com/Hitesh-s0lanki/url-shortener",
     },
     {
+        id: 11,
+        name: "Codetech",
+        description: "An interactive platform designed for competitive programmers and developers to solve coding challenges in a LeetCode-style environment",
+        image: "/projects/codetech.png",
+        technologies: ["React", "Firebase", "file", "code compiler", "leetcode"],
+        github: "https://github.com/Hitesh-s0lanki/codetech_new",
+        demo: "https://codetech-new.vercel.app"
+    },
+    {
         id: 4,
         name: "Inventory Management",
         description: "The application is deployed on AWS using a secure and scalable architecture.",
@@ -35,6 +44,15 @@ export const projectData: Project[] = [
         technologies: ["Nextjs", "Node.js", "Redux", "Shadcn", "AWS", "RDS", "NAT", "VPC", "EC2", "API Gateway"],
         github: "https://github.com/Hitesh-s0lanki/inventory-management",
         demo: "https://main.d1az7sps7yw18.amplifyapp.com/"
+    },
+    {
+        id: 12,
+        name: "AI-Saas",
+        description: "An AI-powered SaaS dashboard that offers conversation, image, video, music, and code generation tools in a unified interface.",
+        image: "/projects/ai-saas.png",
+        technologies: ["Nextjs", "Shadcn", "OPENAI"],
+        github: "https://github.com/Hitesh-s0lanki/ai-saas",
+        demo: "https://ai-saas-ruby-theta.vercel.app/"
     },
     {
         id: 5,
@@ -63,6 +81,7 @@ export const projectData: Project[] = [
         github: "https://github.com/Hitesh-s0lanki/todovex",
         demo: "https://todovex.vercel.app/"
     },
+
     {
         id: 8,
         name: "26ideas",
@@ -79,14 +98,14 @@ export const projectData: Project[] = [
         technologies: ["Array", "Graph", "linked list", "Tree", "BST", "Sorting"],
         github: "https://github.com/Hitesh-s0lanki/DSALeetcode",
     },
-    // {
-    //     id: 10,
-    //     name: "Terraform IAAC",
-    //     description: "A Terraform-based Infrastructure-as-Code framework for automated, version-controlled provisioning and management of AWS cloud resources",
-    //     image: "/projects/terraform.png",
-    //     technologies: ["Terraform", "AWS", "GitHub Actions"],
-    //     github: "https://github.com/Hitesh-s0lanki/terraform-iaac-vprofile",
-    // },
+    {
+        id: 10,
+        name: "Terraform IAAC",
+        description: "A Terraform-based Infrastructure-as-Code framework for automated, version-controlled provisioning and management of AWS cloud resources",
+        image: "/projects/terraform.png",
+        technologies: ["Terraform", "AWS", "GitHub Actions"],
+        github: "https://github.com/Hitesh-s0lanki/terraform-iaac-vprofile",
+    },
 ]
 
 export const certificates: Certificate[] = [

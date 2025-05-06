@@ -37,6 +37,14 @@ export const projectData: Project[] = [
         demo: "https://codetech-new.vercel.app"
     },
     {
+        id: 13,
+        name: "Email Reply Generator",
+        description: "An AI-powered tool that helps users craft professional and personalized email replies in seconds. It includes a web interface and extends functionality into a Chrome Extension, enabling real-time reply generation directly within your email inbox.",
+        image: "/projects/email-writer-app.png",
+        technologies: ["Nextjs", "Spring Boot", "Java", "Shadcn", "Gemini", "Chrome Extension"],
+        github: "https://github.com/Hitesh-s0lanki/email-reply-generator",
+    },
+    {
         id: 4,
         name: "Inventory Management",
         description: "The application is deployed on AWS using a secure and scalable architecture.",

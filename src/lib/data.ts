@@ -17,7 +17,7 @@ export const projectData: Project[] = [
         image: "/projects/kyabananahai.png",
         technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
         github: "https://github.com/Hitesh-s0lanki/kya-banana-hai-app-fe",
-        demo: "https://kyabananahai.com/",
+        demo: "https://kya-banana-hai-app-fe.vercel.app/",
     },
     {
         id: 3,

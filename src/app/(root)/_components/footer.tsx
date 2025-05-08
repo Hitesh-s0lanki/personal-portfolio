@@ -23,7 +23,7 @@ const Footer = () => {
               9004713782
             </Link>
             <div className="w-[0.5px] bg-[#FCFCFC] h-4 hidden lg:flex md:flex " />
-            <Link href="/Resume.pdf" target="_blank">
+            <Link href="/Hitesh_SDE_Resume.pdf" target="_blank">
               View Resume
             </Link>
           </div>

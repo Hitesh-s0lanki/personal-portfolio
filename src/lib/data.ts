@@ -41,8 +41,16 @@ export const projectData: Project[] = [
         name: "Email Reply Generator",
         description: "An AI-powered tool that helps users craft professional and personalized email replies in seconds. It includes a web interface and extends functionality into a Chrome Extension, enabling real-time reply generation directly within your email inbox.",
         image: "/projects/email-writer-app.png",
-        technologies: ["Nextjs", "Spring Boot", "Java", "Shadcn", "Gemini", "Chrome Extension"],
+        technologies: ["Reactjs", "Typescript", "Vite", "Spring Boot", "Java", "Shadcn", "Gemini", "Chrome Extension"],
         github: "https://github.com/Hitesh-s0lanki/email-reply-generator",
+    },
+    {
+        id: 14,
+        name: "Research Assistant - Chrome Extension",
+        description: "Research Assistant is a productivity-focused Chrome extension that enables users to summarize selected text on any webpage and take instant notes in a sidebar interface.",
+        image: "/projects/research-assistant.png",
+        technologies: ["Spring Boot", "Spring MVC", "Java", "Shadcn", "Gemini", "Chrome Extension"],
+        github: "https://github.com/Hitesh-s0lanki/research-assistant-chromer",
     },
     {
         id: 4,

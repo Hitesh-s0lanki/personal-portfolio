@@ -12,7 +12,7 @@ type Props = {
 const IdeaCard = ({ idea }: Props) => {
   return (
     <div
-      className=" w-full rounded-md group cursor-pointer border shadow-sm flex flex-col justify-between"
+      className=" w-full rounded-md group cursor-pointer border shadow-lg flex flex-col justify-between"
       // onClick={() => onOpen(idea)}
     >
       <div className=" w-full relative transition-all duration-1000">

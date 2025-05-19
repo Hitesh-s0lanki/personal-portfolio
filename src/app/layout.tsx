@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Raleway } from "next/font/google";
 import SheetProvider from "@/components/providers/sheet-provider";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Hitesh Solanki",
@@ -23,6 +24,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <SheetProvider />
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-PXR24BFQ8T"></Script>
+        <script type="text/javascript">
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-PXR24BFQ8T');
+              `}
+        </script>
         {children}
       </body>
     </html>

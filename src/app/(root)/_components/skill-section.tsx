@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, Server, Cloud, Github } from "lucide-react";
+import { Code, Server, Cloud, Github, Sparkles } from "lucide-react";
 
 interface SkillCategoryProps {
   title: string;
@@ -33,33 +33,43 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({
 const SkillSection: React.FC = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Frameworks",
       icon: <Code className="h-5 w-5" />,
       skills: [
         "React",
         "Next.js",
-        "Javascript",
-        "TypeScript",
-        "Tailwind CSS",
-        "Responsive Design",
-        "Chartjs",
+        "Spring",
+        "Spring Boot",
+        "FastApi",
+        "Flask",
+        "Flutter",
+        "Android",
       ],
     },
     {
-      title: "Backend",
+      title: "Backend & Tools",
       icon: <Server className="h-5 w-5" />,
       skills: [
-        "Spring Boot",
-        "Node.js",
-        "Nest.js",
-        "FastApi",
         "Redis",
         "Kafka",
-        "PostgreSQL",
-        "MySQL",
         "GraphQL",
-        "Flask",
         "Microservices",
+        "System Design",
+        "Node.js",
+        "Nest.js",
+        "Web Scraping",
+      ],
+    },
+    {
+      title: "AI & Tools",
+      icon: <Sparkles className="h-5 w-5" />,
+      skills: [
+        "Machine Learning",
+        "Deep Learning",
+        "Hugging Face",
+        "AI Workflow",
+        "Agent AI (n8n)",
+        "NER",
       ],
     },
     {
@@ -95,7 +105,7 @@ const SkillSection: React.FC = () => {
   return (
     <section
       id="skills"
-      className="py-10 p-6 px-4 md:px-10 lg:px-40 flex flex-col justify-center items-center">
+      className="py-10 px-5 md:px-10 lg:px-30 flex flex-col justify-center items-center">
       <h2 className="section-heading text-3xl md:text-5xl lg:text-5xl font-bold mb-4">
         Technical Skills
       </h2>
@@ -103,7 +113,7 @@ const SkillSection: React.FC = () => {
         My technical expertise spans across various domains, enabling me to
         design and implement end-to-end solutions.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5">
         {skillCategories.map((category, index) => (
           <SkillCategory
             key={index}

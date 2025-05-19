@@ -20,6 +20,13 @@ export const projectData: Project[] = [
         demo: "https://kya-banana-hai-app-fe.vercel.app/",
     },
     {
+        id: 15,
+        name: "AI-CRM Platform - 26ideas",
+        description: "An AI-powered CRM platform designed to streamline business operations by centralizing contact, job, candidate, company, and idea data",
+        image: "/projects/crm26ideas.png",
+        technologies: ["Nextjs", "Nestjs", "Microservice", "Shadcn", "Postgres", "Suprabase", "openai", "Google"]
+    },
+    {
         id: 3,
         name: "Shortify",
         description: "A modern, full-stack URL shortening application that enables users to convert lengthy URLs into concise, shareable links.",

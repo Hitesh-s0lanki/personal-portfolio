@@ -11,7 +11,7 @@ const ProjectSection = () => {
       <h1 className=" text-3xl pl-1  md:text-5xl lg:text-5xl text-center md:text-center lg:text-center font-semibold ">
         Ideas <span className="text-[#9b4819]">in Flight</span>
       </h1>
-      <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         {projectData.map((idea) => (
           <IdeaCard key={idea.name} idea={idea} />
         ))}

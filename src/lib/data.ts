@@ -2,6 +2,16 @@ import { Project, Certificate } from "@/type";
 
 export const projectData: Project[] = [
     {
+        id: 17,
+        name: "Space On Hire",
+        description: "An AI-powered platform built to streamline and simplify outdoor advertising management. It provides a unified solution for media owners, advertisers, and agencies to manage assets, bookings, customer data, and analytics through a powerful CRM system",
+        image: "/projects/space-on-hire.png",
+        technologies: ["Nextjs", "OOH", "CRM", "Analytics", "AI", "Customer"],
+        github: "https://github.com/Hitesh-s0lanki/space-on-hire",
+        demo: "https://space-on-hire.vercel.app/",
+        ribbon: "New"
+    },
+    {
         id: 1,
         name: "GadgetOS",
         description: "Browser-based operating system built to simulate a desktop-like experience entirely within your browser.",
@@ -9,6 +19,7 @@ export const projectData: Project[] = [
         technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
         github: "https://github.com/Hitesh-s0lanki/gadgetOS/tree/web_os",
         demo: "https://gadgetos.in/",
+        ribbon: "Hot"
     },
     {
         id: 2,
@@ -18,6 +29,7 @@ export const projectData: Project[] = [
         technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
         github: "https://github.com/Hitesh-s0lanki/kya-banana-hai-app-fe",
         demo: "https://kya-banana-hai-app-fe.vercel.app/",
+        ribbon: "Best"
     },
     {
         id: 15,

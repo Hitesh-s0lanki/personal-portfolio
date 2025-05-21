@@ -16,6 +16,7 @@ const IdeaCard = ({ idea }: Props) => {
       // onClick={() => onOpen(idea)}
     >
       <div className=" w-full relative transition-all duration-1000">
+        {idea.ribbon && <div className="ribbon">{idea.ribbon}</div>}
         <Image
           src={idea.image}
           alt="Frame"

@@ -36,7 +36,8 @@ export const projectData: Project[] = [
         name: "AI-CRM Platform - 26ideas",
         description: "An AI-powered CRM platform designed to streamline business operations by centralizing contact, job, candidate, company, and idea data",
         image: "/projects/crm26ideas.png",
-        technologies: ["Nextjs", "Nestjs", "Microservice", "Shadcn", "Postgres", "Suprabase", "openai", "Google"]
+        technologies: ["Nextjs", "Nestjs", "Microservice", "Shadcn", "Postgres", "Suprabase", "openai", "Google"],
+        github: "https://github.com/Hitesh-s0lanki/microservice-ai-crm",
     },
     {
         id: 3,
@@ -55,6 +56,23 @@ export const projectData: Project[] = [
         github: "https://github.com/Hitesh-s0lanki/codetech_new",
         demo: "https://codetech-new.vercel.app"
     },
+    {
+        id: 18,
+        name: "🎮 Tic Tac Toe AI",
+        description: "This project is a Tic Tac Toe game implemented in Python using Pygame, with support for both Player vs Player and Player vs AI modes. The AI uses the Minimax algorithm for perfect play.",
+        image: "/projects/tictactoe.png",
+        technologies: ["Python", "Pygame", "Minimax", "Algorithm", "AI"],
+        github: "https://github.com/Hitesh-s0lanki/TicTacToeAi"
+    },
+    {
+        id: 19,
+        name: "♟️ Chess (Python + Pygame)",
+        description: "This is a visually interactive Chess game built using Python and Pygame. It supports piece movement, UI themes, drag-and-drop functionality, and more.",
+        image: "/projects/pythonchess.png",
+        technologies: ["Python", "Pygame", "Drag N Drop", "Chess"],
+        github: "https://github.com/Hitesh-s0lanki/ChessAi"
+    },
+
     {
         id: 13,
         name: "Email Reply Generator",
@@ -88,6 +106,25 @@ export const projectData: Project[] = [
         technologies: ["Nextjs", "Shadcn", "OPENAI"],
         github: "https://github.com/Hitesh-s0lanki/ai-saas",
         demo: "https://ai-saas-ruby-theta.vercel.app/"
+    },
+
+    {
+        id: 20,
+        name: "Statistics Dashboard",
+        description: "A modern, responsive React/Next.js dashboard for computing descriptive statistics—Mean, Median, Mode, Missing Frequency, Moments, Skewness, and Kurtosis—with an engaging UI powered by Tailwind CSS and NextUI.",
+        image: "/projects/mean-median-mode.png",
+        technologies: ["Nextjs", "Shadcn", "Math", "Statistics"],
+        github: "https://github.com/Hitesh-s0lanki/mean-median-mode",
+        demo: "https://mean-median-mode-alpha.vercel.app/"
+    },
+    {
+        id: 21,
+        name: "Chess Web",
+        description: "This is a visually interactive Chess game built using html, css, javascript.",
+        image: "/projects/chess-web.png",
+        technologies: ["HTML", "CSS", "Javascript"],
+        github: "https://github.com/Hitesh-s0lanki/Chess-Project",
+        demo: "https://chess-project.vercel.app/"
     },
     {
         id: 5,

@@ -22,7 +22,7 @@ const IdeaCard = ({ idea }: Props) => {
           alt="Frame"
           height={400}
           width={400}
-          className="w-full rounded-t-md"
+          className="w-full rounded-t-md max-h-44 object-center"
         />
       </div>
       <div className=" py-3 px-3 flex flex-col justify-start items-start  gap-4">

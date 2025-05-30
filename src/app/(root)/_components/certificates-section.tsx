@@ -10,7 +10,7 @@ const CertificatesSection: React.FC = () => {
       <h1 className=" text-3xl pl-1  md:text-5xl lg:text-5xl text-center md:text-center lg:text-center font-semibold ">
         Certificates
       </h1>
-      <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-5">
         {certificates.map((certificate) => (
           <CertificateCard key={certificate.name} certificate={certificate} />
         ))}

@@ -9,7 +9,7 @@ type Props = {
 const CertificateCard = ({ certificate }: Props) => {
   return (
     <div
-      className=" w-full rounded-md group cursor-pointer border shadow-sm flex flex-col justify-between"
+      className=" w-full rounded-md group cursor-pointer border shadow-sm flex flex-col"
       // onClick={() => onOpen(idea)}
     >
       <div className=" w-full relative transition-all duration-1000">
@@ -31,7 +31,11 @@ const CertificateCard = ({ certificate }: Props) => {
           </div>
 
           <div className="flex flex-wrap gap-2 mb-4">
-            <Badge variant="outline">{certificate.category}</Badge>
+            {certificate.category.map((tech, index) => (
+              <Badge key={index} variant="outline">
+                {tech}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>

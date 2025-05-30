@@ -15,6 +15,6 @@ export interface Certificate {
     issuer: string;
     date: string;
     image: string;
-    category: string;
+    category: string[];
     link?: string;
 }

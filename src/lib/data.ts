@@ -2,6 +2,15 @@ import { Project, Certificate } from "@/type";
 
 export const projectData: Project[] = [
     {
+        id: 31,
+        name: "Agentic AI",
+        description: "Learn to build real-world AI agents, multi-agent workflows, and autonomous apps with LangGraph and LangChain",
+        image: "/projects/agentic-ai.png",
+        technologies: ["AI", "ReAct Agent", "Tool Agent", "Agentic Rag", "langchain", "langgraph", "langserve", "openai", "Advance Python"],
+        github: "https://github.com/Hitesh-s0lanki/GenAI-AgentAI",
+        ribbon: "Hot"
+    },
+    {
         id: 17,
         name: "Space On Hire",
         description: "An AI-powered platform built to streamline and simplify outdoor advertising management. It provides a unified solution for media owners, advertisers, and agencies to manage assets, bookings, customer data, and analytics through a powerful CRM system",
@@ -19,7 +28,6 @@ export const projectData: Project[] = [
         technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
         github: "https://github.com/Hitesh-s0lanki/gadgetOS/tree/web_os",
         demo: "https://gadgetos.in/",
-        ribbon: "Hot"
     },
     {
         id: 2,
@@ -29,7 +37,6 @@ export const projectData: Project[] = [
         technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
         github: "https://github.com/Hitesh-s0lanki/kya-banana-hai-app-fe",
         demo: "https://kya-banana-hai-app-fe.vercel.app/",
-        ribbon: "Best"
     },
     {
         id: 15,
@@ -182,12 +189,20 @@ export const projectData: Project[] = [
 
 export const certificates: Certificate[] = [
     {
+        id: 4,
+        name: "Complete Agentic AI Bootcamp With LangGraph and Langchain",
+        issuer: "Udemy",
+        date: "2025",
+        image: "/certificates/agentic-ai.jpg",
+        category: ["AI", "ReAct Agent", "Tool Agent", "Agentic Rag", "langchain", "langgraph", "langserve", "openai", "Advance Python"],
+    },
+    {
         id: 1,
         name: "Java Spring Framework 6 with Spring Boot 3",
         issuer: "Udemy",
         date: "2025",
         image: "/certificates/java.png",
-        category: "Spring Boot",
+        category: ["Spring", "Spring Boot", "Core Java", "JPA", "Hibernate", "JSP", "JWT"],
     },
     {
         id: 2,
@@ -195,7 +210,7 @@ export const certificates: Certificate[] = [
         issuer: "Udemy",
         date: "2025",
         image: "/certificates/devops.jpeg",
-        category: "DevOps",
+        category: ["DevOps", "CI/CD", "Jenkins", "Ansible", "Github", "Docker", "Kubernates", "AWS", "linux", "Vagrant"],
     },
     {
         id: 3,
@@ -203,6 +218,6 @@ export const certificates: Certificate[] = [
         issuer: "Udemy",
         date: "2025",
         image: "/certificates/sales.png",
-        category: "Sales ",
+        category: ["Sales"],
     }
 ];

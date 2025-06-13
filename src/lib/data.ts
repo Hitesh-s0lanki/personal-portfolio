@@ -2,6 +2,32 @@ import { Project, Certificate } from "@/type";
 
 export const projectData: Project[] = [
     {
+        id: 32,
+        name: "Meet AI",
+        description: "A real-time, AI-powered video & chat platform—create your own AI “agents,” schedule meetings, and collaborate seamlessly in the browser.",
+        image: "/projects/meet-with-agent.png",
+        technologies: ["AI", "Chat", "Transcript", "Agents", "Meet", "Nextjs", "Stream", "openai", "inngest"],
+        github: "https://github.com/Hitesh-s0lanki/meet-ai",
+        demo: "https://meet-ai-plum.vercel.app/"
+    },
+    {
+        id: 33,
+        name: "Webinar AI",
+        description: "Welcome to Webinar AI, an AI-powered platform that helps you create, manage, and automate webinars — designed to maximize lead generation and conversion using intelligent agents.",
+        image: "/projects/webinar.png",
+        technologies: ["AI", "Agents", "Webinar", "Nextjs", "Stream", "openai", "Conversions", "Vapi AI"],
+        github: "https://github.com/Hitesh-s0lanki/ai-sales-agent",
+    },
+    {
+        id: 34,
+        name: "ReAct Agent ",
+        description: "This project demonstrates a ReAct (Reason + Act) agent implemented using LangChain, integrated with real-world tools like Arxiv, Wikipedia, and Tavily to search, reason, and respond to complex user queries.",
+        image: "/projects/reAct.png",
+        technologies: ["AI", "Agents", "Tools", "Arxiv", "Wikipedia", "Tavily", "Python"],
+        github: "https://github.com/Hitesh-s0lanki/ReAct-agent-with-multi-tools",
+        demo: "https://re-act-agent-with-multi-tools.vercel.app/"
+    },
+    {
         id: 31,
         name: "Agentic AI",
         description: "Learn to build real-world AI agents, multi-agent workflows, and autonomous apps with LangGraph and LangChain",

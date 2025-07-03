@@ -2,6 +2,24 @@ import { Project, Certificate } from "@/type";
 
 export const projectData: Project[] = [
     {
+        id: 50,
+        name: "Agentic Blog Generator",
+        description: "AI-generated blogs via an “agentic” workflow graph.",
+        image: "/projects/agentic-blog.png",
+        technologies: ["AI", "Blog", "Gen AI", "Agents", "Nextjs", "FastAPI", "openai"],
+        github: "https://github.com/Hitesh-s0lanki/blog-generator",
+        demo: "https://blog-generator-tau.vercel.app/"
+    },
+    {
+        id: 51,
+        name: "Agent AI Use-cases Example",
+        description: "A Streamlit-powered application showcasing multiple agentic AI use cases using LangGraph, Tavily, OpenAI, Groq, and LangChain.",
+        image: "/projects/news_ai.png",
+        technologies: ["AI", "Chat", "AI News", "Agents", "Tavily", "Langgraph", "Python", "Streamlit", "openai", "groq"],
+        github: "https://github.com/Hitesh-s0lanki/agentic-ai-chatbot",
+        demo: "https://hitesh-s0lanki-agentic-ai-chatbot-app-1sl3to.streamlit.app/"
+    },
+    {
         id: 32,
         name: "Meet AI",
         description: "A real-time, AI-powered video & chat platform—create your own AI “agents,” schedule meetings, and collaborate seamlessly in the browser.",
@@ -221,6 +239,22 @@ export const certificates: Certificate[] = [
         date: "2025",
         image: "/certificates/agentic-ai.jpg",
         category: ["AI", "ReAct Agent", "Tool Agent", "Agentic Rag", "langchain", "langgraph", "langserve", "openai", "Advance Python"],
+    },
+    {
+        id: 5,
+        name: "gRPC Masterclass with Java & Spring Boot [ Hands-On]",
+        issuer: "Udemy",
+        date: "2025",
+        image: "/certificates/gRPC.jpg",
+        category: ["gRPC", "Protobuf", "Java", "Spring"],
+    },
+    {
+        id: 6,
+        name: "Complete Guide to Protocol Buffers 3 [Java, Golang, Python]",
+        issuer: "Udemy",
+        date: "2025",
+        image: "/certificates/protobuf-certificate.jpg",
+        category: ["Protocol Buffer", "Google", "Java", "Gradle", "Maven"],
     },
     {
         id: 1,

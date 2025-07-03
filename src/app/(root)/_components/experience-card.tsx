@@ -60,7 +60,7 @@ const ExperienceSeciton = () => {
             </h1>
             <p className=" text-3xl font-semibold">26ideas</p>
             <p className=" text-xl text-muted-foreground">
-              Aug 2024 - Mar 2025
+              Aug 2024 - Apr 2025
             </p>
             <p className=" text-2xl">
               Developed an internal business CRM <br />
@@ -93,7 +93,7 @@ const ExperienceSeciton = () => {
             </h1>
             <p className=" text-3xl font-semibold">JustWalkIndia</p>
             <p className=" text-xl text-muted-foreground">
-              Nov 2024 - Mar 2025
+              Nov 2024 - Apr 2025
             </p>
             <p className=" text-2xl">
               JustWalkIndia is a venture by 26ideas Led external integrations,
@@ -105,6 +105,28 @@ const ExperienceSeciton = () => {
                 <Tags key={e} text={e} />
               ))}
             </div>
+          </div>
+        </div>
+        <div className="w-full flex items-center gap-8 justify-end">
+          <div className=" w-full flex flex-col gap-3 justify-end text-right py-2">
+            <h1 className="text-2xl font-medium text-[#828282]">
+              04 - Software Engineer
+            </h1>
+            <p className=" text-3xl font-semibold">Strique AI</p>
+            <p className=" text-xl text-muted-foreground">
+              June 2025 - Present
+            </p>
+            <p className=" text-2xl">Software Engineering at Strique AI</p>
+            <div className=" flex flex-wrap gap-4 justify-end">
+              {["Product", "Java", "Spring Boot"].map((e) => (
+                <Tags key={e} text={e} />
+              ))}
+            </div>
+          </div>
+          <div className=" h-full flex flex-col items-start justify-end relative">
+            <div className=" mb-[0.25px] h-40 md:h-64 w-[2px] bg-[#707070] absolute right-[1px] bottom-1/2"></div>
+            <div className=" mt-3 h-40 md:h-56 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div>
+            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
           </div>
         </div>
       </div>

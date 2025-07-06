@@ -63,9 +63,9 @@ const ExperienceSeciton = () => {
               Aug 2024 - Apr 2025
             </p>
             <p className=" text-2xl">
-              Developed an internal business CRM <br />
-              (crm.26ideas.com) from scratch using Next.js, NestJS, <br />{" "}
-              Prisma, PostgreSQL, and OpenAI for AI utilities.
+              Developed an internal business CRM (crm.26ideas.com) from scratch
+              using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI
+              utilities.
             </p>
             <div className=" flex flex-wrap gap-4 justify-end">
               {["Product", "Engineering", "Developement"].map((e) => (
@@ -101,7 +101,7 @@ const ExperienceSeciton = () => {
               email validation.
             </p>
             <div className=" flex gap-2">
-              {["Tech", "External", "Operations"].map((e) => (
+              {["Tech", "Sports", "External", "Operations"].map((e) => (
                 <Tags key={e} text={e} />
               ))}
             </div>
@@ -116,11 +116,17 @@ const ExperienceSeciton = () => {
             <p className=" text-xl text-muted-foreground">
               June 2025 - Present
             </p>
-            <p className=" text-2xl">Software Engineering at Strique AI</p>
+            <p className=" text-2xl">
+              Monitor campaigns, manage catalog, and automate reporting—all from
+              one dashboard developed exclusively for e-commerce brands and
+              agencies focused on ROAS.
+            </p>
             <div className=" flex flex-wrap gap-4 justify-end">
-              {["Product", "Java", "Spring Boot"].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
+              {["Product", "Java", "Spring Boot", "Protobuf", "Nextjs"].map(
+                (e) => (
+                  <Tags key={e} text={e} />
+                )
+              )}
             </div>
           </div>
           <div className=" h-full flex flex-col items-start justify-end relative">
@@ -197,7 +203,7 @@ const ExperienceSeciton = () => {
         <div className="w-full flex items-center gap-4">
           <div className=" h-full flex flex-col items-start justify-end relative">
             <div className=" mt-3 h-40 w-[2px] bg-[#707070] absolute right-[1px] -top-40"></div>
-            {/* <div className=" h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div> */}
+            <div className=" h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div>
             <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
           </div>
 
@@ -216,6 +222,33 @@ const ExperienceSeciton = () => {
               {["Tech", "External", "Operations"].map((e) => (
                 <Tags key={e} text={e} />
               ))}
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex items-center gap-4">
+          <div className=" h-full flex flex-col items-start justify-end relative">
+            <div className=" mt-3 h-40 w-[2px] bg-[#707070] absolute right-[1px] -top-40"></div>
+            {/* <div className=" h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div> */}
+            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
+          </div>
+
+          <div className=" flex flex-col gap-1 py-2">
+            <h1 className="text-lg font-medium text-[#828282]">
+              04 - Software Engineer
+            </h1>
+            <p className=" text-xl font-semibold">Strique AI</p>
+            <p className=" text-sm text-muted-foreground">Jun 2025 - Present</p>
+            <p className=" text-md">
+              Monitor campaigns, manage catalog, and automate reporting—all from
+              one dashboard developed exclusively for e-commerce brands and
+              agencies focused on ROAS.
+            </p>
+            <div className=" flex flex-wrap gap-2 mt-1">
+              {["Product", "Java", "Spring Boot", "Protobuf", "Nextjs"].map(
+                (e) => (
+                  <Tags key={e} text={e} />
+                )
+              )}
             </div>
           </div>
         </div>

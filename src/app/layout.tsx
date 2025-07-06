@@ -7,7 +7,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Hitesh Solanki",
   description: "Personal Portfolio of Hitesh Solanki",
-  icons: "/profile.png",
+  icons: "/profile.svg",
 };
 
 const font = Raleway({

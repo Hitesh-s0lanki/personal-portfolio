@@ -2,7 +2,7 @@
 
 import { useNavigationSheet } from "@/hooks/use-navigation-sheet";
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -16,6 +16,7 @@ const Navbar = () => {
     { name: "Projects", path: "/#projects" },
     { name: "Experience", path: "/#experience" },
     { name: "Certificates", path: "/#certificates" },
+    { name: "Ask Me", path: "/ai", icon: <Sparkles className="size-4" /> },
   ];
 
   return (
@@ -26,17 +27,22 @@ const Navbar = () => {
             key={item.path}
             href={item.path}
             className={cn(
-              " hover:text-[#9b4819] hover-underline-animation center transition-all",
+              " hover:text-[#9b4819] hover-underline-animation center transition-all inline-block",
               pathname === item.path && "text-[#9b4819] link-active"
             )}>
-            {item.name}
+            <span className="inline-flex items-center gap-2">
+              {item.name} {item.icon}
+            </span>
           </Link>
         ))}
       </div>
 
       <div
-        className="  flex md:hidden lg:hidden bg-background hover:bg-neutral-100 hover:text-neutral-900 p-1 rounded-sm justify-end"
+        className=" w-full flex md:hidden lg:hidden bg-background hover:bg-neutral-100 hover:text-neutral-900 p-1 rounded-sm justify-between items-center"
         onClick={onOpenNavigation}>
+        <h1 className="font-bold text-lg capitalize">
+          {pathname.replace("/", "")}
+        </h1>
         <Menu className="size-8" />
       </div>
     </div>

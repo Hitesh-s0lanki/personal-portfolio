@@ -1,6 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const Hero = () => {
   return (
@@ -19,7 +22,15 @@ const Hero = () => {
           </p>
         </div>
         <div className=" flex items-center">
-          <Button variant="ghost" className="px-1">
+          <Button
+            variant="ghost"
+            className="px-1"
+            onClick={() => {
+              sendGTMEvent({
+                event: "github-link-click",
+                link: "github.com/Hitesh-s0lanki",
+              });
+            }}>
             <Link href={"https://github.com/Hitesh-s0lanki"} target="_blank">
               <Image
                 src={"/social/github.svg"}

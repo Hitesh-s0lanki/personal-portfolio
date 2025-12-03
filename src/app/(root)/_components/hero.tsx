@@ -1,70 +1,47 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import Link from "next/link";
-import { sendGTMEvent } from "@next/third-parties/google";
+import { ChevronDown, UserRound } from "lucide-react";
 
 const Hero = () => {
+  const handleScroll = () => {
+    const el = document.querySelector("#experience");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <div className=" w-full flex justify-center items-center py-20 md:py-20 lg:pt-52 fadeInDown-animation">
-      <div className="w-full md:w-2/3 lg:w-2/3 flex flex-col justify-center items-center gap-5 text-center">
-        <h1 className=" text-4xl md:text-5xl lg:text-5xl font-semibold">
-          Hello, <span className=" text-[#9b4819]">I am Hitesh Solanki!</span>
-        </h1>
-        <div className="text-xl md:text-[27px] lg:text-[21px] mt-2 px-4 md:px-0 lg:px-0 space-y-2 font-semibold text-gray-600">
-          <p>
-            Results-driven Software Engineer with expertise in building scalable
-            systems, deploying
-            <br />
-            cloud-native applications, and integrating AI into production-ready
-            products.
-          </p>
-        </div>
-        <div className=" flex items-center">
-          <Button
-            variant="ghost"
-            className="px-1"
-            onClick={() => {
-              sendGTMEvent({
-                event: "github-link-click",
-                link: "github.com/Hitesh-s0lanki",
-              });
-            }}>
-            <Link href={"https://github.com/Hitesh-s0lanki"} target="_blank">
-              <Image
-                src={"/social/github.svg"}
-                alt="github"
-                height={30}
-                width={30}
-              />
-            </Link>
-          </Button>
-          <Button variant="ghost" className="px-1">
-            <Link
-              href={"https://www.linkedin.com/in/hitesh-solanki-a058872a0/"}
-              target="_blank">
-              <Image
-                src={"/social/linkedin.svg"}
-                alt="linkedin"
-                height={30}
-                width={30}
-              />
-            </Link>
-          </Button>
-          <Button variant="ghost" className="px-1">
-            <Link href={"https://leetcode.com/u/hitesh4623/"} target="_blank">
-              <Image
-                src={"/social/leetcode.png"}
-                alt="Leetcode"
-                height={25}
-                width={25}
-              />
-            </Link>
-          </Button>
-        </div>
+    <section className="w-full flex flex-col gap-6 justify-center items-center py-24 md:py-32 lg:pt-48 fadeInDown-animation">
+      <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-orange-50 px-3 py-1 text-xs font-medium text-[#9b4819]">
+        <UserRound className="h-3 w-3" />
+        <span>About Me</span>
       </div>
-    </div>
+      <div className="w-full md:w-3/4 lg:w-2/3 flex flex-col justify-center items-center gap-6 text-center px-6">
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
+          Hello, I am{" "}
+          <span className="bg-gradient-to-r from-[#f97316] to-[#9b4819] bg-clip-text text-transparent">
+            Hitesh Solanki
+          </span>
+          !
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-lg md:text-xl text-gray-600 max-w-4xl leading-relaxed">
+          I believe in building meaningful products through clarity, ownership,
+          and strong execution. I love breaking down complex challenges,
+          designing simple solutions, and using technology as a multiplier for
+          business growth.
+        </p>
+
+        {/* CTA Button */}
+        <Button size="lg" variant={"link"} onClick={handleScroll}>
+          Explore My Work
+          <ChevronDown className="h-5 w-5" />
+        </Button>
+      </div>
+    </section>
   );
 };
 

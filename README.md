@@ -69,7 +69,15 @@ Welcome to **Personal Portfolio v2**! This repository contains a modern, interac
 
    ```env
    NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+   RESEND_API_KEY=your_resend_api_key_here
+   RESEND_FROM_EMAIL=your_verified_email@yourdomain.com
+   RESEND_TO_EMAIL=your_email@yourdomain.com
    ```
+
+   **Note**: 
+   - Get your Resend API key from [resend.com](https://resend.com)
+   - Verify your domain or use a verified email address for `RESEND_FROM_EMAIL`
+   - `RESEND_TO_EMAIL` is where contact form submissions will be sent
 
 4. **Run in development mode**
 

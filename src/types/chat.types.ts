@@ -3,4 +3,6 @@ export type Message = {
     role: string;
     content: string;
     created?: string;
+    timestamp?: Date;
+    isTyping?: boolean;
 }

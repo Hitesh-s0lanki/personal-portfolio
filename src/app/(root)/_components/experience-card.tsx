@@ -1,13 +1,22 @@
 import Tags from "@/components/tags";
+import { Briefcase } from "lucide-react";
 
 const ExperienceSeciton = () => {
   return (
     <section
       id="experience"
-      className=" w-full px-10 md:px-10 lg:px-40 py-5 md:py-20 lg:py-20 gap-4 md:gap-20 lg:gap-20 flex flex-col fadeInDown-animation">
+      className=" w-full px-10 md:px-10 lg:px-40 py-5 md:py-20 lg:py-20 gap-4 md:gap-20 lg:gap-20 flex flex-col fadeInDown-animation"
+    >
       <div className=" flex flex-col justify-center items-center gap-2">
-        <h1 className=" font-semibold w-full text-3xl md:text-4xl lg:text-4xl text-center flex justify-center items-center ">
-          My Experience
+        <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-orange-50 px-3 py-1 text-xs font-medium text-[#9b4819]">
+          <Briefcase className="h-3 w-3" />
+          <span>Experience</span>
+        </div>
+        <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold">
+          My{" "}
+          <span className="bg-gradient-to-r from-[#f97316] to-[#9b4819] bg-clip-text text-transparent">
+            Experience
+          </span>
         </h1>
         <p className="text-muted-foreground mb-12 max-w-2xl text-center">
           A concise overview of my professional journey, showcasing key roles,

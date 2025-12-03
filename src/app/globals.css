@@ -200,7 +200,6 @@
   transform-origin: bottom center;
 }
 
-
 /* HTML: <div class="ribbon">Your text content</div> */
 .ribbon {
   font-size: 14px;
@@ -209,7 +208,7 @@
 }
 .ribbon {
   --f: .5em; /* control the folded part */
-  
+
   position: absolute;
   top: 0;
   left: 0;
@@ -222,4 +221,15 @@
   transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
   transform-origin: 100% 100%;
   background-color: #F07818; /* the main color  */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

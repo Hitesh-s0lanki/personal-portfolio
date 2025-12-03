@@ -3,19 +3,17 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { useNavigationSheet } from "@/hooks/use-navigation-sheet";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { Sparkles } from "lucide-react";
 
 const NavigationSheet = () => {
   const router = useRouter();
   const pathname = usePathname();
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "Skills", path: "/#skills" },
+    { name: "About", path: "/" },
     { name: "Projects", path: "/#projects" },
     { name: "Experience", path: "/#experience" },
-    { name: "Certificates", path: "/#certificates" },
-    { name: "Ask Me", path: "/ai", icon: <Sparkles className="size-5" /> },
+    { name: "Chat", path: "/ai" },
+    { name: "Contact", path: "/#contact" },
   ];
 
   const { isOpen, onClose } = useNavigationSheet();
@@ -38,9 +36,10 @@ const NavigationSheet = () => {
                   className={cn(
                     " hover:text-[#9b4819]  center transition-all",
                     pathname === item.path && "text-[#9b4819]"
-                  )}>
+                  )}
+                >
                   <span className="inline-flex items-center gap-2">
-                    {item.name} {item.icon}
+                    {item.name}
                   </span>
                 </Button>
               ))}

@@ -8,10 +8,7 @@ type Props = {
 
 const CertificateCard = ({ certificate }: Props) => {
   return (
-    <div
-      className=" w-full rounded-md group cursor-pointer border shadow-sm flex flex-col"
-      // onClick={() => onOpen(idea)}
-    >
+    <div className=" w-full rounded-md group cursor-pointer border shadow-sm flex flex-col">
       <div className=" w-full relative transition-all duration-1000">
         <Image
           src={certificate.image}

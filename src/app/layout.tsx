@@ -3,7 +3,7 @@ import "./globals.css";
 import { Raleway } from "next/font/google";
 import SheetProvider from "@/components/providers/sheet-provider";
 import { Toaster } from "@/components/ui/sonner";
-// import Script from "next/script";
+import Script from "next/script";
 import Navbar from "./(root)/_components/navbar";
 import Footer from "./(root)/_components/footer";
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={font.className}>
         <SheetProvider />
 
-        {/* <Script
+        <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-PXR24BFQ8T"
         ></Script>
@@ -40,7 +40,7 @@ export default function RootLayout({
 
                 gtag('config', 'G-PXR24BFQ8T');
               `}
-        </script> */}
+        </script>
         <Navbar />
         {children}
         <Footer />

@@ -8,19 +8,23 @@ import { Message } from "@/types/chat.types";
 
 const ChatScreen = () => {
   const [messages, setMessages] = useState<Message[]>([]);
-
   const [loading, setLoading] = useState(false);
 
   return (
-    <div className="h-screen w-full flex justify-center items-center relative flex-col py-5 md:py-10 lg:py-10 gap-5">
-      {/* <NavbarDemo /> */}
-      <div className=" absolute h-full w-full blur-lg bg-[url('/bg-design.svg')] -z-10" />
+    <div className="h-screen w-full flex flex-col relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute h-full w-full blur-lg bg-[url('/bg-design.svg')] -z-10" />
 
-      {messages.length === 0 ? (
-        <BlankScreen />
-      ) : (
-        <ChatMessage messages={messages} loading={loading} />
-      )}
+      {/* Messages Area */}
+      <div className="flex-1 overflow-hidden">
+        {messages.length === 0 ? (
+          <BlankScreen />
+        ) : (
+          <ChatMessage messages={messages} loading={loading} />
+        )}
+      </div>
+
+      {/* Input Area - Fixed at bottom */}
       <ChatPrompt
         loading={loading}
         setLoading={setLoading}

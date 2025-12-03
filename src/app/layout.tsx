@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Raleway } from "next/font/google";
 import SheetProvider from "@/components/providers/sheet-provider";
-import Script from "next/script";
+import { Toaster } from "@/components/ui/sonner";
+// import Script from "next/script";
+import Navbar from "./(root)/_components/navbar";
+import Footer from "./(root)/_components/footer";
 
 export const metadata: Metadata = {
   title: "Hitesh Solanki",
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
 
 const font = Raleway({
   subsets: ["latin"],
-  weight: ["600", "400", "500"],
+  weight: ["300", "400", "500"],
 });
 
 export default function RootLayout({
@@ -25,9 +28,10 @@ export default function RootLayout({
       <body className={font.className}>
         <SheetProvider />
 
-        <Script
+        {/* <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-PXR24BFQ8T"></Script>
+          src="https://www.googletagmanager.com/gtag/js?id=G-PXR24BFQ8T"
+        ></Script>
         <script type="text/javascript">
           {`
                 window.dataLayer = window.dataLayer || [];
@@ -36,8 +40,11 @@ export default function RootLayout({
 
                 gtag('config', 'G-PXR24BFQ8T');
               `}
-        </script>
+        </script> */}
+        <Navbar />
         {children}
+        <Footer />
+        <Toaster />
       </body>
     </html>
   );

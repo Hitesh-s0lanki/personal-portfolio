@@ -19,3 +19,10 @@ export interface Certificate {
   category: string[];
   link?: string;
 }
+
+export interface Blog {
+  id: number;
+  title: string;
+  url: string;
+  description?: string;
+}

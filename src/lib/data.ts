@@ -83,7 +83,6 @@ export const projectData: Project[] = [
     name: "Shopify Hydrogen Storefront",
     description: "A Shopify Hydrogen app for a client.",
     image: "/projects/shopify-hydrogen-app.png",
-    featured: true,
     technologies: [
       "Shopify",
       "Hydrogen",

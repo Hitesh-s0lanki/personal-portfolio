@@ -100,7 +100,6 @@ export const projectData: Project[] = [
     name: "Agentic Blog Generator",
     description: "AI-generated blogs via an “agentic” workflow graph.",
     image: "/projects/agentic-blog.png",
-    featured: true,
     technologies: [
       "AI",
       "Blog",

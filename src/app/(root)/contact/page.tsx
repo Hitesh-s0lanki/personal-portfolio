@@ -20,7 +20,7 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -55,7 +55,8 @@ const ContactPage = () => {
     } catch (error) {
       console.error("Error sending message:", error);
       toast.error("Failed to send message", {
-        description: error instanceof Error ? error.message : "Please try again later.",
+        description:
+          error instanceof Error ? error.message : "Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
@@ -73,7 +74,7 @@ const ContactPage = () => {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect with me",
-      href: "https://www.linkedin.com/in/hitesh-solanki-a058872a0/",
+      href: "https://www.linkedin.com/in/hitesh-s0lanki/",
     },
     {
       icon: Github,
@@ -112,8 +113,9 @@ const ContactPage = () => {
               </span>
             </h1>
             <p className="max-w-2xl text-sm md:text-base text-gray-600">
-              Have a project in mind or want to collaborate? I&apos;d love to hear
-              from you. Send me a message and I&apos;ll respond as soon as possible.
+              Have a project in mind or want to collaborate? I&apos;d love to
+              hear from you. Send me a message and I&apos;ll respond as soon as
+              possible.
             </p>
           </div>
 
@@ -131,7 +133,9 @@ const ContactPage = () => {
                       <Link
                         key={index}
                         href={info.href}
-                        target={info.href.startsWith("http") ? "_blank" : "_self"}
+                        target={
+                          info.href.startsWith("http") ? "_blank" : "_self"
+                        }
                         rel={
                           info.href.startsWith("http")
                             ? "noopener noreferrer"
@@ -293,4 +297,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-

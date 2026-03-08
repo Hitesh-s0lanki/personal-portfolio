@@ -2,6 +2,49 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: 33,
+    name: "AI Story Planner (Mobile App)",
+    description:
+      "AI-powered story planning workspace to structure ideas, generate outlines, and accelerate writing workflows.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/ai-story-planner/main/images/stories-page.png",
+    technologies: [
+      "React",
+      "React Native",
+      "TypeScript",
+      "Tailwind CSS",
+      "OpenAI",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/ai-story-planner",
+  },
+  {
+    id: 32,
+    name: "Streamflow",
+    description:
+      "OTT streaming platform experience with modern media delivery, discovery UI, and creator-first content workflows.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/streamflow/main/images/home.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Tailwind CSS",
+      "Streaming",
+      "Vercel",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/streamflow",
+    demo: "https://streamflow-sigma.vercel.app/",
+  },
+  {
+    id: 31,
+    name: "AI Auth Agent",
+    description:
+      "Context-preserving AI authentication flow focused on reducing login drop-off and improving conversion.",
+    image: "/blogs/auth-ai.png",
+    technologies: ["Nextjs", "TypeScript", "Tailwind CSS", "Auth", "OpenAI"],
+    github: "https://github.com/Hitesh-s0lanki/ai-auth-agent",
+  },
+  {
     id: 30,
     name: "SprintPlanner",
     description: "Turning your ideas into executable 4-week ventures.",
@@ -533,6 +576,8 @@ export const blogsData: Blog[] = [
     url: "https://medium.com/@hiteshsolanki4623/building-a-multi-stage-agentic-ai-system-with-langchain-sprintplanner-case-study-ff923a04e3ac",
     description:
       "Learn how to build a multi-stage agentic AI system using LangChain with a real-world case study of SprintPlanner.",
+    image: "/blogs/multi-stage.png",
+    tags: ["LangChain", "Next.js", "Tailwind CSS", "TypeScript", "OpenAI"],
   },
   {
     id: 2,
@@ -541,5 +586,26 @@ export const blogsData: Blog[] = [
     url: "https://medium.com/@hiteshsolanki4623/how-i-built-an-ai-powered-shopify-storefront-that-talks-like-a-human-ce81d835fb90",
     description:
       "Discover how to create an AI-powered Shopify storefront with natural human-like conversations.",
+    image: "/projects/shopify-hydrogen-app.png",
+    tags: ["Shopify", "Next.js", "Tailwind CSS", "TypeScript", "OpenAI"],
+  },
+  {
+    id: 3,
+    title:
+      "Stop Losing Users at Login: How Context-Preserving AI Auth Agents Reduce Drop-off",
+    url: "https://medium.com/@hiteshsolanki4623/stop-losing-users-at-login-how-context-preserving-ai-auth-agents-reduce-drop-off-3cc54325f62e",
+    description:
+      "A practical breakdown of building context-preserving AI auth flows that reduce login drop-off and improve conversion.",
+    image: "/blogs/auth-ai.png",
+    tags: ["Next.js", "TypeScript", "OpenAI", "Tailwind CSS", "Auth"],
+  },
+  {
+    id: 4,
+    title: "From One Instagram Reel to a Full OTT Streaming Platform",
+    url: "https://medium.com/@hiteshsolanki4623/from-one-instagram-reel-to-a-full-ott-streaming-platform-d1e0ee28c513",
+    description:
+      "How a single short-form content idea evolved into a complete OTT platform, from architecture to product execution.",
+    image: "https://streamflow-sigma.vercel.app/sprite.jpg",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Streaming"],
   },
 ];

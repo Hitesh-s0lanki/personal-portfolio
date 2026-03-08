@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "readmes:sync": "node scripts/sync-project-readmes.mjs",
     "prepare": "husky"
   },
   "lint-staged": {

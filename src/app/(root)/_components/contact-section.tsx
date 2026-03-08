@@ -21,7 +21,7 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData({
       ...formData,
@@ -56,7 +56,8 @@ const ContactSection = () => {
     } catch (error) {
       console.error("Error sending message:", error);
       toast.error("Failed to send message", {
-        description: error instanceof Error ? error.message : "Please try again later.",
+        description:
+          error instanceof Error ? error.message : "Please try again later.",
       });
     } finally {
       setIsSubmitting(false);
@@ -97,8 +98,9 @@ const ContactSection = () => {
             </span>
           </h1>
           <p className="max-w-2xl text-sm md:text-base text-gray-600">
-            Have a project in mind or want to collaborate? I&apos;d love to hear from
-            you. Send me a message and I&apos;ll respond as soon as possible.
+            Have a project in mind or want to collaborate? I&apos;d love to hear
+            from you. Send me a message and I&apos;ll respond as soon as
+            possible.
           </p>
         </div>
 
@@ -170,7 +172,7 @@ const ContactSection = () => {
                       asChild
                     >
                       <Link
-                        href="https://www.linkedin.com/in/hitesh-solanki-a058872a0/"
+                        href="https://www.linkedin.com/in/hitesh-s0lanki/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

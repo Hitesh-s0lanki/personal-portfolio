@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "role": "Software Engineer Intern",
+    "company": "26ideas",
+    "period": "Apr 2024 - Aug 2024",
+    "description": "26ideas is a full-stack venture studio that builds, incubates, and invests in early-stage startups. Built foundational components of CRM tools, including roles management, product categories, subcategories, users, projects, and task management.",
+    "tags": ["Market Research", "Concept Validation", "ChatGPT", "Automation", "CRM", "Python", "Typescript", "Nextjs"]
+  },
+  {
+    "id": 2,
+    "role": "Engineering Lead",
+    "company": "26ideas",
+    "period": "Aug 2024 - Apr 2025",
+    "description": "Developed an internal business CRM (crm.26ideas.com) from scratch using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI utilities.",
+    "tags": ["Product", "Engineering", "Developement"]
+  },
+  {
+    "id": 3,
+    "role": "Builder",
+    "company": "JustWalkIndia",
+    "period": "Nov 2024 - Apr 2025",
+    "description": "JustWalkIndia is a venture by 26ideas. Led external integrations, including WhatsApp and SMS services partners, and Zerobounce for email validation.",
+    "tags": ["Tech", "Sports", "External", "Operations"]
+  },
+  {
+    "id": 4,
+    "role": "Software Engineer",
+    "company": "Strique AI",
+    "period": "June 2025 - Present",
+    "description": "Monitor campaigns, manage catalog, and automate reporting—all from one dashboard developed exclusively for e-commerce brands and agencies focused on ROAS.",
+    "tags": ["Product", "Java", "Spring Boot", "Protobuf", "Nextjs"]
+  }
+]

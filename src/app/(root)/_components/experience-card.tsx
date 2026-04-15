@@ -1,7 +1,12 @@
 import Tags from "@/components/tags";
 import { Briefcase } from "lucide-react";
+import { Fragment } from "react";
+import { Experience } from "@/type";
+import experienceData from "@/lib/experience-data.json";
 
-const ExperienceSeciton = () => {
+const ExperienceSection = () => {
+  const experiences = experienceData as Experience[];
+
   return (
     <section
       id="experience"
@@ -24,250 +29,119 @@ const ExperienceSeciton = () => {
         </p>
       </div>
 
+      {/* Desktop zigzag layout */}
       <div className="hidden w-full lg:grid grid-cols-2 justify-start">
-        <div />
-        <div className="w-full flex items-center gap-8">
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mt-3 h-48 md:h-64 w-[2px] bg-[#707070] absolute -left-[3px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -left-2 top-1/2" />
-          </div>
-          {/* <Image src="/images/idea-validation.svg" alt="idea-validation" height={100} width={100} /> */}
-          <div className=" flex flex-col gap-3 py-4">
-            <h1 className="text-2xl font-medium text-[#828282]">
-              01 - Software Engineer Intern
-            </h1>
-            <p className=" text-3xl font-semibold">26ideas</p>
-            <p className=" text-xl text-muted-foreground">
-              Apr 2024 - Aug 2024
-            </p>
-            <p className=" text-2xl">
-              26ideas is a full-stack venture studio that builds, incubates, and
-              invests in early-stage startups.Built foundational components of
-              CRM tools, including roles management, product categories,
-              subcategories, users, projects, and task management.
-            </p>
-            <div className=" flex flex-wrap gap-2">
-              {[
-                "Market Research",
-                "Concept Validation",
-                "ChatGPT",
-                "Automation",
-                "CRM",
-                "Python",
-                "Typescript",
-                "Nextjs",
-              ].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex items-center gap-8 justify-end">
-          <div className=" w-full flex flex-col gap-3 justify-end text-right py-2">
-            <h1 className="text-2xl font-medium text-[#828282]">
-              02 - Engineering Lead
-            </h1>
-            <p className=" text-3xl font-semibold">26ideas</p>
-            <p className=" text-xl text-muted-foreground">
-              Aug 2024 - Apr 2025
-            </p>
-            <p className=" text-2xl">
-              Developed an internal business CRM (crm.26ideas.com) from scratch
-              using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI
-              utilities.
-            </p>
-            <div className=" flex flex-wrap gap-4 justify-end">
-              {["Product", "Engineering", "Developement"].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
-            </div>
-          </div>
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mb-[0.25px] h-40 md:h-64 w-[2px] bg-[#707070] absolute right-[1px] bottom-1/2"></div>
-            <div className=" mt-3 h-40 md:h-56 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
-          </div>
-        </div>
-        <div />
-        <div />
-        <div className="w-full flex items-center gap-8">
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className="mb-[0.25px] h-40 md:h-64 w-[2px] bg-[#707070] absolute -left-[3px] bottom-1/2"></div>
-            <div className=" mt-3 h-40 md:h-56  w-[2px] bg-[#707070] absolute -left-[3px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -left-2 top-1/2" />
-          </div>
-          <div className=" flex flex-col gap-3 py-2">
-            <h1 className="text-2xl font-medium text-[#828282]">
-              03 - Builder
-            </h1>
-            <p className=" text-3xl font-semibold">JustWalkIndia</p>
-            <p className=" text-xl text-muted-foreground">
-              Nov 2024 - Apr 2025
-            </p>
-            <p className=" text-2xl">
-              JustWalkIndia is a venture by 26ideas Led external integrations,
-              including WhatsApp and SMS services partners, and Zerobounce for
-              email validation.
-            </p>
-            <div className=" flex gap-2">
-              {["Tech", "Sports", "External", "Operations"].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex items-center gap-8 justify-end">
-          <div className=" w-full flex flex-col gap-3 justify-end text-right py-2">
-            <h1 className="text-2xl font-medium text-[#828282]">
-              04 - Software Engineer
-            </h1>
-            <p className=" text-3xl font-semibold">Strique AI</p>
-            <p className=" text-xl text-muted-foreground">
-              June 2025 - Present
-            </p>
-            <p className=" text-2xl">
-              Monitor campaigns, manage catalog, and automate reporting—all from
-              one dashboard developed exclusively for e-commerce brands and
-              agencies focused on ROAS.
-            </p>
-            <div className=" flex flex-wrap gap-4 justify-end">
-              {["Product", "Java", "Spring Boot", "Protobuf", "Nextjs"].map(
-                (e) => (
-                  <Tags key={e} text={e} />
-                )
-              )}
-            </div>
-          </div>
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mb-[0.25px] h-40 md:h-64 w-[2px] bg-[#707070] absolute right-[1px] bottom-1/2"></div>
-            <div className=" mt-3 h-40 md:h-56 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
-          </div>
-        </div>
+        {experiences.map((exp, index) => {
+          const isFirst = index === 0;
+          const isLast = index === experiences.length - 1;
+          const isEven = index % 2 === 0;
+          const num = String(index + 1).padStart(2, "0");
+
+          if (isEven) {
+            return (
+              <Fragment key={exp.id}>
+                <div />
+                <div className="w-full flex items-center gap-8">
+                  <div className="h-full flex flex-col items-start justify-end relative">
+                    {!isFirst && (
+                      <div className="mb-[0.25px] h-40 md:h-64 w-[2px] bg-[#707070] absolute -left-[3px] bottom-1/2" />
+                    )}
+                    {!isLast && (
+                      <div className="mt-3 h-48 md:h-64 w-[2px] bg-[#707070] absolute -left-[3px] top-1/2" />
+                    )}
+                    <div className="rounded-full h-3 w-3 bg-[#707070] absolute -left-2 top-1/2" />
+                  </div>
+                  <div className="flex flex-col gap-3 py-4">
+                    <h1 className="text-2xl font-medium text-[#828282]">
+                      {num} - {exp.role}
+                    </h1>
+                    <p className="text-3xl font-semibold">{exp.company}</p>
+                    <p className="text-xl text-muted-foreground">{exp.period}</p>
+                    <p className="text-2xl">{exp.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.tags.map((tag) => (
+                        <Tags key={tag} text={tag} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Fragment>
+            );
+          }
+
+          return (
+            <Fragment key={exp.id}>
+              <div className="w-full flex items-center gap-8 justify-end">
+                <div className="w-full flex flex-col gap-3 justify-end text-right py-2">
+                  <h1 className="text-2xl font-medium text-[#828282]">
+                    {num} - {exp.role}
+                  </h1>
+                  <p className="text-3xl font-semibold">{exp.company}</p>
+                  <p className="text-xl text-muted-foreground">{exp.period}</p>
+                  <p className="text-2xl">{exp.description}</p>
+                  <div className="flex flex-wrap gap-4 justify-end">
+                    {exp.tags.map((tag) => (
+                      <Tags key={tag} text={tag} />
+                    ))}
+                  </div>
+                </div>
+                <div className="h-full flex flex-col items-start justify-end relative">
+                  {!isFirst && (
+                    <div className="mb-[0.25px] h-40 md:h-64 w-[2px] bg-[#707070] absolute right-[1px] bottom-1/2" />
+                  )}
+                  {!isLast && (
+                    <div className="mt-3 h-40 md:h-56 w-[2px] bg-[#707070] absolute right-[1px] top-1/2" />
+                  )}
+                  <div className="rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
+                </div>
+              </div>
+              <div />
+            </Fragment>
+          );
+        })}
       </div>
 
-      {/* Mobile View */}
+      {/* Mobile stacked layout */}
       <div className="lg:hidden md:px-10 w-full flex flex-col gap-3">
-        <div className="w-full flex items-center gap-4">
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mt-3 h-64 w-[2px] bg-[#707070] absolute -left-[3px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -left-2 top-1/2" />
-          </div>
-          <div className=" flex flex-col gap-1 py-4">
-            <h1 className="text-lg font-medium text-[#828282]">
-              01 - Software Engineer Intern
-            </h1>
-            <p className=" text-xl font-semibold">26ideas</p>
-            <p className=" text-sm text-muted-foreground">
-              Apr 2024 - Aug 2024
-            </p>
-            <p className=" text-md">
-              26ideas is a full-stack venture studio that builds, incubates, and
-              invests in early-stage startups.Built foundational components of
-              CRM tools, including roles management, product categories,
-              subcategories, users, projects, and task management.
-            </p>
-            <div className=" flex flex-wrap gap-2 mt-1">
-              {[
-                "Market Research",
-                "Concept Validation",
-                "ChatGPT",
-                "Automation",
-                "CRM",
-                "Python",
-                "Typescript",
-                "Nextjs",
-              ].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex items-center gap-4">
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mt-3 h-40 w-[2px] bg-[#707070] absolute right-[1px] -top-40"></div>
-            <div className=" mt-3 h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
-          </div>
-          <div className=" flex flex-col gap-1 py-4">
-            <h1 className="text-lg font-medium text-[#828282]">
-              02 - Engineering Lead
-            </h1>
-            <p className=" text-xl font-semibold">26ideas</p>
-            <p className=" text-sm text-muted-foreground">
-              Aug 2024 - Mar 2025
-            </p>
-            <p className=" text-md">
-              Developed an internal business CRM (crm.26ideas.com) from scratch
-              using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI
-              utilities.
-            </p>
-            <div className=" flex flex-wrap gap-2 mt-1">
-              {["Product", "Engineering", "Developement"].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="w-full flex items-center gap-4">
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mt-3 h-40 w-[2px] bg-[#707070] absolute right-[1px] -top-40"></div>
-            <div className=" h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div>
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
-          </div>
+        {experiences.map((exp, index) => {
+          const isFirst = index === 0;
+          const isLast = index === experiences.length - 1;
+          const num = String(index + 1).padStart(2, "0");
 
-          <div className=" flex flex-col gap-1 py-2">
-            <h1 className="text-lg font-medium text-[#828282]">03 - Builder</h1>
-            <p className=" text-xl font-semibold">JustWalkIndia</p>
-            <p className=" text-sm text-muted-foreground">
-              Nov 2024 - Mar 2025
-            </p>
-            <p className=" text-md">
-              JustWalkIndia is a venture by 26ideas Led external integrations,
-              including WhatsApp and SMS services partners, and Zerobounce for
-              email validation.
-            </p>
-            <div className=" flex flex-wrap gap-2 mt-1">
-              {["Tech", "External", "Operations"].map((e) => (
-                <Tags key={e} text={e} />
-              ))}
+          return (
+            <div key={exp.id} className="w-full flex items-center gap-4">
+              <div className="h-full flex flex-col items-start justify-end relative">
+                {!isFirst && (
+                  <div className="mt-3 h-40 w-[2px] bg-[#707070] absolute right-[1px] -top-40" />
+                )}
+                {!isLast && (
+                  <div className="mt-3 h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2" />
+                )}
+                <div className="rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
+              </div>
+              <div className="flex flex-col gap-1 py-4">
+                <h1 className="text-lg font-medium text-[#828282]">
+                  {num} - {exp.role}
+                </h1>
+                <p className="text-xl font-semibold">{exp.company}</p>
+                <p className="text-sm text-muted-foreground">{exp.period}</p>
+                <p className="text-md">{exp.description}</p>
+                <div className="flex flex-wrap gap-2 mt-1">
+                  {exp.tags.map((tag) => (
+                    <Tags key={tag} text={tag} />
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="w-full flex items-center gap-4">
-          <div className=" h-full flex flex-col items-start justify-end relative">
-            <div className=" mt-3 h-40 w-[2px] bg-[#707070] absolute right-[1px] -top-40"></div>
-            {/* <div className=" h-64 w-[2px] bg-[#707070] absolute right-[1px] top-1/2"></div> */}
-            <div className=" rounded-full h-3 w-3 bg-[#707070] absolute -right-1 top-1/2" />
-          </div>
-
-          <div className=" flex flex-col gap-1 py-2">
-            <h1 className="text-lg font-medium text-[#828282]">
-              04 - Software Engineer
-            </h1>
-            <p className=" text-xl font-semibold">Strique AI</p>
-            <p className=" text-sm text-muted-foreground">Jun 2025 - Present</p>
-            <p className=" text-md">
-              Monitor campaigns, manage catalog, and automate reporting—all from
-              one dashboard developed exclusively for e-commerce brands and
-              agencies focused on ROAS.
-            </p>
-            <div className=" flex flex-wrap gap-2 mt-1">
-              {["Product", "Java", "Spring Boot", "Protobuf", "Nextjs"].map(
-                (e) => (
-                  <Tags key={e} text={e} />
-                )
-              )}
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
 
-      <div className="w-full  pt-10 lg:pt-28 md:pt-28">
-        <div className="h-[0.5px] bg-[#BDBDBD] w-full " />
+      <div className="w-full pt-10 lg:pt-28 md:pt-28">
+        <div className="h-[0.5px] bg-[#BDBDBD] w-full" />
       </div>
     </section>
   );
 };
 
-export default ExperienceSeciton;
+export default ExperienceSection;

@@ -28,3 +28,12 @@ export interface Blog {
   image?: string;
   tags?: string[];
 }
+
+export interface Experience {
+  id: number;
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  tags: string[];
+}

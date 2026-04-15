@@ -64,10 +64,10 @@ const TechIconTag = ({ tech }: TechIconTagProps) => {
 
   return (
     <span
-      className="inline-flex items-center gap-1.5 rounded-full border bg-slate-50 px-2.5 py-1 text-xs font-medium text-gray-700"
+      className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-slate-50 px-2.5 py-1 text-xs font-medium text-gray-700 transition-colors duration-150 hover:border-[#9b4819]/30 hover:bg-orange-50/60 hover:text-[#9b4819]"
       title={tech}
     >
-      <TechIcon size={14} stroke={1.8} />
+      <TechIcon size={13} stroke={1.8} />
       <span>{tech}</span>
     </span>
   );

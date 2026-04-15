@@ -2,6 +2,51 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: 35,
+    name: "GadgetOS",
+    description:
+      "AI-powered web operating system with a macOS-inspired desktop — manage files by meaning, run natural language terminal commands via GPT-4.1, and build entirely in the browser.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/gadgetOS/main/public/desktop.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Convex",
+      "OpenAI",
+      "AWS S3",
+      "Tailwind CSS",
+      "Zustand",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/gadgetOS",
+    ribbon: "New",
+    demo: "https://www.gadgetos.in/",
+    featured: true,
+  },
+  {
+    id: 34,
+    name: "Bookify",
+    description:
+      "AI-powered reading companion — upload a PDF book, get an AI-generated overview, chat with the content via RAG, and have live voice conversations about it.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/bookify/main/images/home.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Gemini",
+      "LangChain",
+      "pgVector",
+      "AWS S3",
+      "Clerk",
+      "Vapi",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/bookify",
+    ribbon: "New",
+    demo: "https://bookify-navy.vercel.app/",
+    featured: true,
+  },
+  {
     id: 33,
     name: "AI Story Planner (Mobile App)",
     description:
@@ -85,7 +130,6 @@ export const projectData: Project[] = [
     description:
       "An AI-powered sous-chef that turns your pantry into mouthwatering recipes—complete with step-by-step instructions, on-brand dish imagery, and curated YouTube video tutorials.",
     image: "/projects/cooksy.png",
-    featured: true,
     technologies: [
       "Nextjs",
       "React Flow",
@@ -105,7 +149,6 @@ export const projectData: Project[] = [
     description:
       "A modular, AI-powered platform that uses agent collaboration to automate complex reasoning tasks. Demonstrates CrewAI with real-time streaming, FastAPI backend, and multi-model LLM support.",
     image: "/projects/crew-ai-example.png",
-    featured: true,
     technologies: [
       "Python",
       "FastAPI",

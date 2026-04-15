@@ -1,3 +1,132 @@
+# Experience Section — Dynamic Data Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Extract hardcoded experience entries into `src/lib/experience-data.json` and refactor `experience-card.tsx` to render them dynamically, preserving the existing zigzag desktop and stacked mobile layouts exactly.
+
+**Architecture:** A flat JSON array in `src/lib/experience-data.json` is imported directly into the component. An `Experience` interface in `src/type.ts` types the data. The component maps over the array, deriving display number, grid column side, and timeline line visibility from each item's index.
+
+**Tech Stack:** Next.js 14, TypeScript (`resolveJsonModule: true` already set), React Fragments for grid cell pairs, Tailwind CSS.
+
+---
+
+## File Map
+
+| File | Action | Responsibility |
+|------|--------|---------------|
+| `src/lib/experience-data.json` | Create | Single source of truth for all experience entries |
+| `src/type.ts` | Modify | Add `Experience` interface |
+| `src/app/(root)/_components/experience-card.tsx` | Modify | Import JSON, map over data, derive layout from index |
+
+---
+
+## Task 1: Create `experience-data.json`
+
+**Files:**
+- Create: `src/lib/experience-data.json`
+
+- [ ] **Step 1: Create the file with all 4 entries**
+
+Create `src/lib/experience-data.json`:
+
+```json
+[
+  {
+    "id": 1,
+    "role": "Software Engineer Intern",
+    "company": "26ideas",
+    "period": "Apr 2024 - Aug 2024",
+    "description": "26ideas is a full-stack venture studio that builds, incubates, and invests in early-stage startups. Built foundational components of CRM tools, including roles management, product categories, subcategories, users, projects, and task management.",
+    "tags": ["Market Research", "Concept Validation", "ChatGPT", "Automation", "CRM", "Python", "Typescript", "Nextjs"]
+  },
+  {
+    "id": 2,
+    "role": "Engineering Lead",
+    "company": "26ideas",
+    "period": "Aug 2024 - Apr 2025",
+    "description": "Developed an internal business CRM (crm.26ideas.com) from scratch using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI utilities.",
+    "tags": ["Product", "Engineering", "Developement"]
+  },
+  {
+    "id": 3,
+    "role": "Builder",
+    "company": "JustWalkIndia",
+    "period": "Nov 2024 - Apr 2025",
+    "description": "JustWalkIndia is a venture by 26ideas. Led external integrations, including WhatsApp and SMS services partners, and Zerobounce for email validation.",
+    "tags": ["Tech", "Sports", "External", "Operations"]
+  },
+  {
+    "id": 4,
+    "role": "Software Engineer",
+    "company": "Strique AI",
+    "period": "June 2025 - Present",
+    "description": "Monitor campaigns, manage catalog, and automate reporting—all from one dashboard developed exclusively for e-commerce brands and agencies focused on ROAS.",
+    "tags": ["Product", "Java", "Spring Boot", "Protobuf", "Nextjs"]
+  }
+]
+```
+
+- [ ] **Step 2: Commit**
+
+```bash
+git add src/lib/experience-data.json
+git commit -m "feat: add experience-data.json"
+```
+
+---
+
+## Task 2: Add `Experience` type to `src/type.ts`
+
+**Files:**
+- Modify: `src/type.ts`
+
+- [ ] **Step 1: Add the interface**
+
+Open `src/type.ts` and append after the existing `Blog` interface:
+
+```typescript
+export interface Experience {
+  id: number;
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  tags: string[];
+}
+```
+
+- [ ] **Step 2: Verify TypeScript is happy**
+
+```bash
+npx tsc --noEmit
+```
+
+Expected: no errors.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add src/type.ts
+git commit -m "feat: add Experience type"
+```
+
+---
+
+## Task 3: Refactor `experience-card.tsx` to use dynamic data
+
+**Files:**
+- Modify: `src/app/(root)/_components/experience-card.tsx`
+
+**Key logic:**
+- `index % 2 === 0` → even item → right column (left-aligned content, left-side dot)
+- `index % 2 !== 0` → odd item → left column (right-aligned content, right-side dot)
+- Each item renders as a React Fragment containing 2 grid cells: `[empty, item]` for even, `[item, empty]` for odd
+- Display number: `String(index + 1).padStart(2, "0")` → `"01"`, `"02"`, etc.
+- Timeline lines: `isFirst = index === 0`, `isLast = index === data.length - 1`
+
+- [ ] **Step 1: Replace the entire file content**
+
+```tsx
 import Tags from "@/components/tags";
 import { Briefcase } from "lucide-react";
 import { Fragment } from "react";
@@ -145,3 +274,31 @@ const ExperienceSection = () => {
 };
 
 export default ExperienceSection;
+```
+
+- [ ] **Step 2: Verify TypeScript compiles**
+
+```bash
+npx tsc --noEmit
+```
+
+Expected: no errors.
+
+- [ ] **Step 3: Start dev server and verify visually**
+
+```bash
+npm run dev
+```
+
+Open `http://localhost:3000` and scroll to the Experience section. Verify:
+- Desktop (≥1024px): zigzag layout with 4 entries, timeline dots and lines intact
+- Mobile (<1024px): stacked single-column layout with all 4 entries
+- Entry numbers are "01", "02", "03", "04"
+- All roles, companies, periods, descriptions, and tags match the original
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add src/app/(root)/_components/experience-card.tsx
+git commit -m "refactor: make experience section dynamic from JSON"
+```

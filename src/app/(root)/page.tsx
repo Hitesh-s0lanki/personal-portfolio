@@ -1,5 +1,5 @@
 import CertificatesSection from "./_components/certificates-section";
-import ExperienceSeciton from "./_components/experience-card";
+import ExperienceSection from "./_components/experience-card";
 import Hero from "./_components/hero";
 // import ProjectSection from "./_components/project-section";
 import FeaturedProjectsSection from "./_components/featured-projects-section";
@@ -17,7 +17,7 @@ const Home = () => {
         </div>
       </div>
 
-      <ExperienceSeciton />
+      <ExperienceSection />
       <FeaturedProjectsSection />
 
       {/* <SkillSection /> */}

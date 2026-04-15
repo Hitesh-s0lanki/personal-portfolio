@@ -13,7 +13,7 @@
     "company": "26ideas",
     "period": "Aug 2024 - Apr 2025",
     "description": "Developed an internal business CRM (crm.26ideas.com) from scratch using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI utilities.",
-    "tags": ["Product", "Engineering", "Developement"]
+    "tags": ["Product", "Engineering", "Development"]
   },
   {
     "id": 3,

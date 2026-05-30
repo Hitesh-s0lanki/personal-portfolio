@@ -2,6 +2,27 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: 36,
+    name: "Resonance",
+    description:
+      "AI-powered text-to-speech and voice cloning platform for organisations, with custom voice uploads, browser recording, usage-based billing, and a managed voice library.",
+    image: "/projects/resonance-home.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Tailwind CSS",
+      "Clerk",
+      "PostgreSQL",
+      "Prisma",
+      "tRPC",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/resonance",
+    ribbon: "New",
+    demo: "https://resonance-lilac-gamma.vercel.app",
+    featured: true,
+  },
+  {
     id: 35,
     name: "GadgetOS",
     description:
@@ -20,7 +41,7 @@ export const projectData: Project[] = [
     ],
     github: "https://github.com/Hitesh-s0lanki/gadgetOS",
     ribbon: "New",
-    demo: "https://www.gadgetos.in/",
+    demo: "https://gadget-os-app.vercel.app/",
     featured: true,
   },
   {
@@ -313,7 +334,7 @@ export const projectData: Project[] = [
     image: "/projects/gadgetOS.png",
     technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
     github: "https://github.com/Hitesh-s0lanki/gadgetOS/tree/web_os",
-    demo: "https://gadgetos.in/",
+    demo: "https://gadget-os-app.vercel.app/",
   },
   {
     id: 17,

@@ -4,7 +4,7 @@ description: "UI/UX design intelligence. 67 styles, 96 palettes, 57 font pairing
 ---
 # UI/UX Pro Max - Design Intelligence
 
-Comprehensive design guide for web and mobile applications. Contains 67 styles, 96 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types across 13 technology stacks. Searchable database with priority-based recommendations.
+Comprehensive design guide for web and mobile applications. Contains 67 styles, 96 color palettes, 57 font pairings, 99 UX guidelines, and 25 chart types across 13 technology stacks. Reference datasets are organized by domain with priority-based recommendations.
 
 ## When to Apply
 
@@ -84,40 +84,6 @@ Reference these guidelines when:
 - `color-guidance` - Use accessible color palettes
 - `data-table` - Provide table alternative for accessibility
 
-## How to Use
-
-Search specific domains using the CLI tool below.
-
----
-
-
-## Prerequisites
-
-Check if Python is installed:
-
-```bash
-python3 --version || python --version
-```
-
-If Python is not installed, install it based on user's OS:
-
-**macOS:**
-```bash
-brew install python3
-```
-
-**Ubuntu/Debian:**
-```bash
-sudo apt update && sudo apt install python3
-```
-
-**Windows:**
-```powershell
-winget install Python.Python.3.12
-```
-
----
-
 ## How to Use This Skill
 
 When user requests UI/UX work (design, build, create, implement, review, fix, improve), follow this workflow:
@@ -130,96 +96,56 @@ Extract key information from user request:
 - **Industry**: healthcare, fintech, gaming, education, etc.
 - **Stack**: React, Vue, Next.js, or default to `html-tailwind`
 
-### Step 2: Generate Design System (REQUIRED)
+### Step 2: Build the Design System (REQUIRED)
 
-**Always start with `--design-system`** to get comprehensive recommendations with reasoning:
+Always start by reading the relevant CSV datasets in `data/` and synthesize a complete design system. Use:
 
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<product_type> <industry> <keywords>" --design-system [-p "Project Name"]
-```
+- `products.csv` for product and industry fit
+- `styles.csv` for visual direction and effects
+- `colors.csv` for palette choices
+- `typography.csv` for font pairing
+- `landing.csv` for page structure and CTA patterns
+- `ui-reasoning.csv` for selection rules, anti-patterns, and trade-offs
 
-This command:
-1. Searches 5 domains in parallel (product, style, color, landing, typography)
-2. Applies reasoning rules from `ui-reasoning.csv` to select best matches
-3. Returns complete design system: pattern, style, colors, typography, effects
-4. Includes anti-patterns to avoid
+Return a concrete design system with pattern, style, colors, typography, effects, interaction behavior, and anti-patterns to avoid.
 
-**Example:**
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "beauty spa wellness service" --design-system -p "Serenity Spa"
-```
+### Step 3: Supplement with Detailed Dataset Checks (as needed)
 
-### Step 2b: Persist Design System (Master + Overrides Pattern)
-
-To save the design system for hierarchical retrieval across sessions, add `--persist`:
-
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name"
-```
-
-This creates:
-- `design-system/MASTER.md` — Global Source of Truth with all design rules
-- `design-system/pages/` — Folder for page-specific overrides
-
-**With page-specific override:**
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name" --page "dashboard"
-```
-
-This also creates:
-- `design-system/pages/dashboard.md` — Page-specific deviations from Master
-
-**How hierarchical retrieval works:**
-1. When building a specific page (e.g., "Checkout"), first check `design-system/pages/checkout.md`
-2. If the page file exists, its rules **override** the Master file
-3. If not, use `design-system/MASTER.md` exclusively
-
-### Step 3: Supplement with Detailed Searches (as needed)
-
-After getting the design system, use domain searches to get additional details:
-
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
-```
+After drafting the design system, inspect specific CSV files for additional details:
 
 **When to use detailed searches:**
 
-| Need | Domain | Example |
-|------|--------|---------|
-| More style options | `style` | `--domain style "glassmorphism dark"` |
-| Chart recommendations | `chart` | `--domain chart "real-time dashboard"` |
-| UX best practices | `ux` | `--domain ux "animation accessibility"` |
-| Alternative fonts | `typography` | `--domain typography "elegant luxury"` |
-| Landing structure | `landing` | `--domain landing "hero social-proof"` |
+| Need | Dataset | Example Keywords |
+|------|---------|------------------|
+| More style options | `styles.csv` | glassmorphism, dark, minimal |
+| Chart recommendations | `charts.csv` | real-time, dashboard, comparison |
+| UX best practices | `ux-guidelines.csv` | animation, accessibility, z-index |
+| Alternative fonts | `typography.csv` | elegant, luxury, serif |
+| Landing structure | `landing.csv` | hero, testimonial, pricing |
 
 ### Step 4: Stack Guidelines (Default: html-tailwind)
 
 Get implementation-specific best practices. If user doesn't specify a stack, **default to `html-tailwind`**.
 
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack html-tailwind
-```
-
-Available stacks: `html-tailwind`, `react`, `nextjs`, `vue`, `svelte`, `swiftui`, `react-native`, `flutter`, `shadcn`, `jetpack-compose`
+Read the matching file in `data/stacks/`. Available stacks: `html-tailwind`, `react`, `nextjs`, `vue`, `svelte`, `swiftui`, `react-native`, `flutter`, `shadcn`, `jetpack-compose`.
 
 ---
 
-## Search Reference
+## Dataset Reference
 
 ### Available Domains
 
-| Domain | Use For | Example Keywords |
+| Dataset | Use For | Example Keywords |
 |--------|---------|------------------|
-| `product` | Product type recommendations | SaaS, e-commerce, portfolio, healthcare, beauty, service |
-| `style` | UI styles, colors, effects | glassmorphism, minimalism, dark mode, brutalism |
-| `typography` | Font pairings, Google Fonts | elegant, playful, professional, modern |
-| `color` | Color palettes by product type | saas, ecommerce, healthcare, beauty, fintech, service |
-| `landing` | Page structure, CTA strategies | hero, hero-centric, testimonial, pricing, social-proof |
-| `chart` | Chart types, library recommendations | trend, comparison, timeline, funnel, pie |
-| `ux` | Best practices, anti-patterns | animation, accessibility, z-index, loading |
-| `react` | React/Next.js performance | waterfall, bundle, suspense, memo, rerender, cache |
-| `web` | Web interface guidelines | aria, focus, keyboard, semantic, virtualize |
-| `prompt` | AI prompts, CSS keywords | (style name) |
+| `products.csv` | Product type recommendations | SaaS, e-commerce, portfolio, healthcare, beauty, service |
+| `styles.csv` | UI styles, colors, effects | glassmorphism, minimalism, dark mode, brutalism |
+| `typography.csv` | Font pairings, Google Fonts | elegant, playful, professional, modern |
+| `colors.csv` | Color palettes by product type | saas, ecommerce, healthcare, beauty, fintech, service |
+| `landing.csv` | Page structure, CTA strategies | hero, hero-centric, testimonial, pricing, social-proof |
+| `charts.csv` | Chart types, library recommendations | trend, comparison, timeline, funnel, pie |
+| `ux-guidelines.csv` | Best practices, anti-patterns | animation, accessibility, z-index, loading |
+| `react-performance.csv` | React/Next.js performance | waterfall, bundle, suspense, memo, rerender, cache |
+| `web-interface.csv` | Web interface guidelines | aria, focus, keyboard, semantic, virtualize |
 
 ### Available Stacks
 
@@ -250,53 +176,29 @@ Available stacks: `html-tailwind`, `react`, `nextjs`, `vue`, `svelte`, `swiftui`
 
 ### Step 2: Generate Design System (REQUIRED)
 
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "beauty spa wellness service elegant" --design-system -p "Serenity Spa"
-```
+Read `products.csv`, `styles.csv`, `colors.csv`, `typography.csv`, `landing.csv`, and `ui-reasoning.csv` for "beauty spa wellness service elegant".
 
 **Output:** Complete design system with pattern, style, colors, typography, effects, and anti-patterns.
 
 ### Step 3: Supplement with Detailed Searches (as needed)
 
-```bash
-# Get UX guidelines for animation and accessibility
-python3 skills/ui-ux-pro-max/scripts/search.py "animation accessibility" --domain ux
-
-# Get alternative typography options if needed
-python3 skills/ui-ux-pro-max/scripts/search.py "elegant luxury serif" --domain typography
-```
+Read `ux-guidelines.csv` for animation and accessibility details. Read `typography.csv` for elegant luxury serif alternatives if needed.
 
 ### Step 4: Stack Guidelines
 
-```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "layout responsive form" --stack html-tailwind
-```
+Read `data/stacks/html-tailwind.csv` for layout, responsive, and form implementation guidance.
 
 **Then:** Synthesize design system + detailed searches and implement the design.
-
----
-
-## Output Formats
-
-The `--design-system` flag supports two output formats:
-
-```bash
-# ASCII box (default) - best for terminal display
-python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system
-
-# Markdown - best for documentation
-python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system -f markdown
-```
 
 ---
 
 ## Tips for Better Results
 
 1. **Be specific with keywords** - "healthcare SaaS dashboard" > "app"
-2. **Search multiple times** - Different keywords reveal different insights
+2. **Check multiple datasets** - Different files reveal different insights
 3. **Combine domains** - Style + Typography + Color = Complete design system
-4. **Always check UX** - Search "animation", "z-index", "accessibility" for common issues
-5. **Use stack flag** - Get implementation-specific best practices
+4. **Always check UX** - Review animation, z-index, accessibility, and loading rules
+5. **Use stack files** - Get implementation-specific best practices
 6. **Iterate** - If first search doesn't match, try different keywords
 
 ---

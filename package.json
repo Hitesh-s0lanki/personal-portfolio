@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@dicebear/collection": "^9.2.4",
-    "@dicebear/core": "^9.2.4",
+    "@dicebear/core": "^9.4.2",
     "@hookform/resolvers": "^5.2.2",
     "@next/third-parties": "^15.4.1",
     "@radix-ui/react-accordion": "^1.2.12",

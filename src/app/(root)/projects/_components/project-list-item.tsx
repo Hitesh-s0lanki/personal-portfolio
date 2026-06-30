@@ -13,6 +13,8 @@ interface ProjectListItemProps {
 }
 
 const ProjectListItem = ({ project, onOpen }: ProjectListItemProps) => {
+  const isInternalProjectLink = project.demo?.startsWith("/");
+
   return (
     <article
       className="group w-full rounded-2xl border border-gray-200/80 bg-white/90 shadow-sm hover:shadow-xl hover:shadow-[#9b4819]/8 hover:-translate-y-0.5 hover:border-[#9b4819]/20 transition-all duration-300 cursor-pointer overflow-hidden"
@@ -103,12 +105,12 @@ const ProjectListItem = ({ project, onOpen }: ProjectListItemProps) => {
               >
                 <Link
                   href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={isInternalProjectLink ? undefined : "_blank"}
+                  rel={isInternalProjectLink ? undefined : "noopener noreferrer"}
                   onClick={(event) => event.stopPropagation()}
                 >
                   <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
-                  Live Demo
+                  {isInternalProjectLink ? "View Case Study" : "Live Demo"}
                 </Link>
               </Button>
             )}

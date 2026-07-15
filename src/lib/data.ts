@@ -2,6 +2,48 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: 38,
+    name: "MindBoard Arena",
+    description:
+      "Stateful chess arena where language-model agents reason through the board instead of running engine lines — Human vs AI, Human vs Human, and Agent vs Agent modes with persisted games, move history, and match logs.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/mind-board/main/images/home.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Tailwind CSS",
+      "Drizzle",
+      "PostgreSQL",
+      "LangChain",
+      "OpenAI",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/mind-board",
+    ribbon: "New",
+    demo: "https://mind-board-six.vercel.app",
+    featured: true,
+  },
+  {
+    id: 37,
+    name: "Go E-commerce API",
+    description:
+      "E-commerce REST API in Go — JWT auth, product catalog, cart, and orders, with S3 uploads and SQS-backed domain events. Built with gin, GORM, and Postgres.",
+    image: "/projects/go.png",
+    technologies: [
+      "Go",
+      "Gin",
+      "GORM",
+      "PostgreSQL",
+      "JWT",
+      "AWS S3",
+      "AWS SQS",
+      "Docker",
+      "Swagger",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/go-ecommerce",
+    ribbon: "New",
+  },
+  {
     id: 36,
     name: "Resonance",
     description:
@@ -553,6 +595,21 @@ export const projectData: Project[] = [
 ];
 
 export const certificates: Certificate[] = [
+  {
+    id: 7,
+    name: "Go (Golang) Masterclass: Learn Like a Google Engineer",
+    issuer: "Udemy",
+    date: "2026",
+    image: "/certificates/go.jpg",
+    category: [
+      "Go",
+      "Golang",
+      "Concurrency",
+      "Goroutines",
+      "REST API",
+      "Backend",
+    ],
+  },
   {
     id: 4,
     name: "Complete Agentic AI Bootcamp With LangGraph and Langchain",

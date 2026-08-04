@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import SectionEyebrow from "@/components/section-eyebrow";
 import { Mail, Linkedin, Github, Phone, Send, MapPin } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { Sparkles } from "lucide-react";
 import { toast } from "sonner";
 
 const ContactPage = () => {
@@ -97,15 +97,12 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[#f4f1e8] flex flex-col">
+    <div className="min-h-screen w-full flex flex-col">
       <section className="w-full flex justify-center items-center py-20 md:py-24 lg:py-28">
         <div className="w-full max-w-7xl px-6 md:px-8 lg:px-10">
           {/* Heading */}
           <div className="flex flex-col items-center text-center gap-3 mb-12 md:mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-orange-50 px-3 py-1 text-xs font-medium text-[#9b4819]">
-              <Sparkles className="h-3 w-3" />
-              <span>Get In Touch</span>
-            </div>
+            <SectionEyebrow>Get In Touch</SectionEyebrow>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold">
               Let&apos;s{" "}
               <span className="bg-gradient-to-r from-[#f97316] to-[#9b4819] bg-clip-text text-transparent">

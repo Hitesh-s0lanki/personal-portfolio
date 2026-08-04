@@ -4,7 +4,7 @@ import { GenerateAvatar } from "@/components/generate-avatar";
 import { Button } from "@/components/ui/button";
 import { useNavigationSheet } from "@/hooks/use-navigation-sheet";
 import { cn } from "@/lib/utils";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -71,18 +71,6 @@ const Navbar = () => {
             />
           </Link>
         </Button>
-        <Button
-          asChild
-          className="rounded-full bg-gradient-to-r from-[#f97316] to-[#9b4819] text-white hover:from-[#ea580c] hover:to-[#7c3a14] border-0 shadow-md"
-        >
-          <Link
-            href="/ai"
-            className="flex items-center gap-2 text-sm font-medium"
-          >
-            <Sparkles className="size-4" aria-hidden />
-            Assistant
-          </Link>
-        </Button>
       </div>
 
       <div className=" w-full flex md:hidden lg:hidden bg-background hover:bg-neutral-100 hover:text-neutral-900 p-1 rounded-sm justify-between items-center">
@@ -93,13 +81,6 @@ const Navbar = () => {
               variant="initials"
               className="size-9"
             />
-          </Link>
-          <Link
-            href="/ai"
-            aria-label="Personal Assistant"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-r from-[#f97316] to-[#9b4819] text-white shadow-md transition-opacity hover:opacity-90"
-          >
-            <Sparkles className="size-4" />
           </Link>
         </div>
 

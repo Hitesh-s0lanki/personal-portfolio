@@ -8,7 +8,7 @@ type Props = {
 
 const CertificateCard = ({ certificate }: Props) => {
   return (
-    <div className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#9b4819]/20 hover:shadow-xl hover:shadow-[#9b4819]/8 cursor-default">
+    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#9b4819]/20 hover:shadow-xl hover:shadow-[#9b4819]/8 cursor-default">
       {/* Certificate image area */}
       <div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-50">
         <Image

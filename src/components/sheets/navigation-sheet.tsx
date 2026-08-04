@@ -13,7 +13,6 @@ const NavigationSheet = () => {
     { name: "Projects", path: "/#projects" },
     { name: "Experience", path: "/#experience" },
     { name: "Blogs", path: "/blogs" },
-    { name: "Chat", path: "/ai" },
     { name: "Contact", path: "/#contact" },
   ];
 

@@ -3,10 +3,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import SectionEyebrow from "@/components/section-eyebrow";
 import { Mail, Phone, Send } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { Sparkles } from "lucide-react";
 import Image from "next/image";
 import { toast } from "sonner";
 
@@ -82,21 +82,18 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="w-full flex justify-center items-center py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white via-slate-50 to-white fadeInDown-animation"
+      className="w-full flex justify-center items-center py-16 md:py-20 lg:py-24 fadeInDown-animation"
     >
       <div className="w-full max-w-6xl px-5 md:px-8 lg:px-10 space-y-10 md:space-y-12">
         {/* Heading */}
         <div className="flex flex-col items-center text-center gap-3 mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-orange-200/70 bg-orange-50 px-3 py-1 text-xs font-medium text-[#9b4819]">
-            <Sparkles className="h-3 w-3" />
-            <span>Get In Touch</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl lg:text-4xl font-semibold">
+          <SectionEyebrow>Get In Touch</SectionEyebrow>
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-semibold">
             Let&apos;s{" "}
             <span className="bg-gradient-to-r from-[#f97316] to-[#9b4819] bg-clip-text text-transparent">
               Connect
             </span>
-          </h1>
+          </h2>
           <p className="max-w-2xl text-sm md:text-base text-gray-600">
             Have a project in mind or want to collaborate? I&apos;d love to hear
             from you. Send me a message and I&apos;ll respond as soon as

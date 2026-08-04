@@ -2,8 +2,54 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
-    id: 38,
+    id: "relivo-mcp-server",
+    name: "Relivo MCP Server",
+    tagline: "Multi-namespace MCP server in Go",
+    description:
+      "Multi-namespace Model Context Protocol server in Go — memory, skills, events, Search Console, and Product Hunt tools mounted on one HTTP mux over Streamable HTTP. Namespaces self-register at startup, and every route is admitted by its own auth: API keys for MCP clients, Clerk for the dashboard.",
+    image: "/projects/go-mcp-server.png",
+    technologies: [
+      "Go",
+      "MCP",
+      "PostgreSQL",
+      "pgVector",
+      "Kafka",
+      "Nextjs",
+      "TypeScript",
+      "Clerk",
+      "Docker",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/go-mcp-server",
+    ribbon: "New",
+    demo: "https://go-mcp-server.vercel.app",
+    featured: true,
+  },
+  {
+    id: "rumiva",
+    name: "Rumiva",
+    tagline: "Immersive 3D interior design studio",
+    description:
+      "Interior design studio experience built for a 3D web hackathon — a React Three Fiber room you explore straight from the hero, plus designer portfolios, project galleries, and service pages tied together with GSAP motion and smooth scrolling.",
+    image: "/projects/rumiva.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "React Three Fiber",
+      "Three.js",
+      "WebGL",
+      "GSAP",
+      "Tailwind CSS",
+      "Shadcn",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/dream-space-3d",
+    ribbon: "New",
+    demo: "https://dream-space-3d.vercel.app",
+  },
+  {
+    id: "mindboard-arena",
     name: "MindBoard Arena",
+    tagline: "LLM agents play real chess",
     description:
       "Stateful chess arena where language-model agents reason through the board instead of running engine lines — Human vs AI, Human vs Human, and Agent vs Agent modes with persisted games, move history, and match logs.",
     image:
@@ -24,8 +70,9 @@ export const projectData: Project[] = [
     featured: true,
   },
   {
-    id: 37,
+    id: "go-ecommerce-api",
     name: "Go E-commerce API",
+    tagline: "E-commerce REST API in Go",
     description:
       "E-commerce REST API in Go — JWT auth, product catalog, cart, and orders, with S3 uploads and SQS-backed domain events. Built with gin, GORM, and Postgres.",
     image: "/projects/go.png",
@@ -44,8 +91,9 @@ export const projectData: Project[] = [
     ribbon: "New",
   },
   {
-    id: 36,
+    id: "resonance",
     name: "Resonance",
+    tagline: "Text-to-speech and voice cloning",
     description:
       "AI-powered text-to-speech and voice cloning platform for organisations, with custom voice uploads, browser recording, usage-based billing, and a managed voice library.",
     image: "/projects/resonance-home.png",
@@ -65,8 +113,9 @@ export const projectData: Project[] = [
     featured: true,
   },
   {
-    id: 35,
+    id: "gadgetos",
     name: "GadgetOS",
+    tagline: "AI operating system in browser",
     description:
       "AI-powered web operating system with a macOS-inspired desktop — manage files by meaning, run natural language terminal commands via GPT-4.1, and build entirely in the browser.",
     image:
@@ -84,11 +133,11 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/gadgetOS",
     ribbon: "New",
     demo: "https://gadget-os-app.vercel.app/",
-    featured: true,
   },
   {
-    id: 34,
+    id: "bookify",
     name: "Bookify",
+    tagline: "AI reading companion for PDFs",
     description:
       "AI-powered reading companion — upload a PDF book, get an AI-generated overview, chat with the content via RAG, and have live voice conversations about it.",
     image:
@@ -110,8 +159,9 @@ export const projectData: Project[] = [
     featured: true,
   },
   {
-    id: 33,
+    id: "ai-story-planner",
     name: "AI Story Planner (Mobile App)",
+    tagline: "Plan stories with AI outlines",
     description:
       "AI-powered story planning workspace to structure ideas, generate outlines, and accelerate writing workflows.",
     image:
@@ -127,8 +177,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/ai-story-planner",
   },
   {
-    id: 32,
+    id: "streamflow",
     name: "Streamflow",
+    tagline: "OTT streaming platform for creators",
     description:
       "OTT streaming platform experience with modern media delivery, discovery UI, and creator-first content workflows.",
     image:
@@ -144,8 +195,9 @@ export const projectData: Project[] = [
     demo: "https://streamflow-sigma.vercel.app/",
   },
   {
-    id: 31,
+    id: "ai-auth-agent",
     name: "AI Auth Agent",
+    tagline: "Context-preserving AI auth flow",
     description:
       "Context-preserving AI authentication flow focused on reducing login drop-off and improving conversion.",
     image: "/blogs/auth-ai.png",
@@ -153,8 +205,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/ai-auth-agent",
   },
   {
-    id: 30,
+    id: "sprintplanner",
     name: "SprintPlanner",
+    tagline: "Ideas into four-week ventures",
     description: "Turning your ideas into executable 4-week ventures.",
     image: "/projects/sprintPlanner.png",
     featured: true,
@@ -169,8 +222,9 @@ export const projectData: Project[] = [
     demo: "https://sprintplanner.xyz",
   },
   {
-    id: 29,
+    id: "ticksy-booking-app",
     name: "Ticksy Booking App",
+    tagline: "Event ticketing and booking system",
     description:
       "A booking app for Ticksy, a ticketing system for events and concerts.",
     image: "/projects/ticksy-banner.svg",
@@ -188,8 +242,9 @@ export const projectData: Project[] = [
     demo: "https://ticksy-booking-app.vercel.app/",
   },
   {
-    id: 28,
+    id: "cooksy",
     name: "Cooksy",
+    tagline: "AI sous-chef for your pantry",
     description:
       "An AI-powered sous-chef that turns your pantry into mouthwatering recipes—complete with step-by-step instructions, on-brand dish imagery, and curated YouTube video tutorials.",
     image: "/projects/cooksy.png",
@@ -207,8 +262,9 @@ export const projectData: Project[] = [
     demo: "https://cooksy-eta.vercel.app/",
   },
   {
-    id: 27,
+    id: "crewai-example",
     name: "CrewAI Example",
+    tagline: "Multi-agent reasoning with CrewAI",
     description:
       "A modular, AI-powered platform that uses agent collaboration to automate complex reasoning tasks. Demonstrates CrewAI with real-time streaming, FastAPI backend, and multi-model LLM support.",
     image: "/projects/crew-ai-example.png",
@@ -228,8 +284,9 @@ export const projectData: Project[] = [
     demo: "https://crew-ai-example.vercel.app",
   },
   {
-    id: 26,
+    id: "shopify-hydrogen-storefront",
     name: "Shopify Hydrogen Storefront",
+    tagline: "Shopify Hydrogen storefront for client",
     description: "A Shopify Hydrogen app for a client.",
     image: "/projects/shopify-hydrogen-app.png",
     technologies: [
@@ -244,8 +301,9 @@ export const projectData: Project[] = [
     demo: "https://shopify-hydrogen-storefront-zeta.vercel.app/",
   },
   {
-    id: 25,
+    id: "agentic-blog-generator",
     name: "Agentic Blog Generator",
+    tagline: "Blogs written by agent workflows",
     description: "AI-generated blogs via an “agentic” workflow graph.",
     image: "/projects/agentic-blog.png",
     technologies: [
@@ -261,8 +319,9 @@ export const projectData: Project[] = [
     demo: "https://blog-generator-tau.vercel.app/",
   },
   {
-    id: 24,
+    id: "agentic-ai-use-cases",
     name: "Agent AI Use-cases Example",
+    tagline: "Agentic AI use-case playground",
     description:
       "A Streamlit-powered application showcasing multiple agentic AI use cases using LangGraph, Tavily, OpenAI, Groq, and LangChain.",
     image: "/projects/news_ai.png",
@@ -282,8 +341,9 @@ export const projectData: Project[] = [
     demo: "https://hitesh-s0lanki-agentic-ai-chatbot-app-1sl3to.streamlit.app/",
   },
   {
-    id: 23,
+    id: "meet-ai",
     name: "Meet AI",
+    tagline: "Video meetings with AI agents",
     description:
       "A real-time, AI-powered video & chat platform—create your own AI “agents,” schedule meetings, and collaborate seamlessly in the browser.",
     image: "/projects/meet-with-agent.png",
@@ -302,8 +362,9 @@ export const projectData: Project[] = [
     demo: "https://meet-ai-plum.vercel.app/",
   },
   {
-    id: 22,
+    id: "webinar-ai",
     name: "Webinar AI",
+    tagline: "AI webinars that convert leads",
     description:
       "Welcome to Webinar AI, an AI-powered platform that helps you create, manage, and automate webinars — designed to maximize lead generation and conversion using intelligent agents.",
     image: "/projects/webinar.png",
@@ -320,8 +381,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/ai-sales-agent",
   },
   {
-    id: 21,
+    id: "react-agent",
     name: "ReAct Agent ",
+    tagline: "ReAct agent with real tools",
     description:
       "This project demonstrates a ReAct (Reason + Act) agent implemented using LangChain, integrated with real-world tools like Arxiv, Wikipedia, and Tavily to search, reason, and respond to complex user queries.",
     image: "/projects/reAct.png",
@@ -338,8 +400,9 @@ export const projectData: Project[] = [
     demo: "https://re-act-agent-with-multi-tools.vercel.app/",
   },
   {
-    id: 20,
+    id: "agentic-ai",
     name: "Agentic AI",
+    tagline: "LangGraph agent workflows, hands-on",
     description:
       "Learn to build real-world AI agents, multi-agent workflows, and autonomous apps with LangGraph and LangChain",
     image: "/projects/agentic-ai.png",
@@ -358,8 +421,9 @@ export const projectData: Project[] = [
     ribbon: "Hot",
   },
   {
-    id: 19,
+    id: "space-on-hire",
     name: "Space On Hire",
+    tagline: "AI platform for outdoor advertising",
     description:
       "An AI-powered platform to streamline outdoor advertising assets, bookings, analytics, and CRM operations.",
     image: "/projects/space-on-hire.png",
@@ -369,8 +433,9 @@ export const projectData: Project[] = [
     ribbon: "New",
   },
   {
-    id: 18,
+    id: "gadgetos-web-os",
     name: "GadgetOS",
+    tagline: "Desktop experience inside the browser",
     description:
       "Browser-based operating system built to simulate a desktop-like experience entirely within your browser.",
     image: "/projects/gadgetOS.png",
@@ -379,8 +444,9 @@ export const projectData: Project[] = [
     demo: "https://gadget-os-app.vercel.app/",
   },
   {
-    id: 17,
+    id: "kya-banana-hai",
     name: "Kya Banana Hai",
+    tagline: "Smart kitchen assistant for cooking",
     description:
       "A smart kitchen assistant that helps you decide what food to cook based on ingredients, time, and mood — powered by AI.",
     image: "/projects/kyabananahai.png",
@@ -389,8 +455,9 @@ export const projectData: Project[] = [
     demo: "https://kya-banana-hai-app-fe.vercel.app/",
   },
   {
-    id: 16,
+    id: "ai-crm-26ideas",
     name: "AI-CRM Platform - 26ideas",
+    tagline: "AI CRM on microservices",
     description:
       "An AI-powered CRM platform designed to streamline operations by centralizing contacts, jobs, candidates, companies, and ideas.",
     image: "/projects/crm26ideas.png",
@@ -407,8 +474,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/microservice-ai-crm",
   },
   {
-    id: 15,
+    id: "shortify",
     name: "Shortify",
+    tagline: "URL shortener on Spring, AWS",
     description:
       "A full-stack URL shortener built with React, Spring, Java, MySQL, Docker, and AWS ECS.",
     image: "/projects/url-shortener-home.png",
@@ -426,8 +494,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/url-shortener",
   },
   {
-    id: 14,
+    id: "codetech",
     name: "Codetech",
+    tagline: "Coding challenges with live compiler",
     description:
       "Interactive coding challenge platform with file-based execution, code compiler, and Firebase auth.",
     image: "/projects/codetech.png",
@@ -436,8 +505,9 @@ export const projectData: Project[] = [
     demo: "https://codetech-new.vercel.app",
   },
   {
-    id: 13,
+    id: "tic-tac-toe-ai",
     name: "🎮 Tic Tac Toe AI",
+    tagline: "Tic tac toe, unbeatable minimax",
     description:
       "Tic Tac Toe with Player vs Player & Player vs AI mode. AI uses Minimax for perfect play.",
     image: "/projects/tictactoe.png",
@@ -445,8 +515,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/TicTacToeAi",
   },
   {
-    id: 12,
+    id: "chess-python-pygame",
     name: "♟️ Chess (Python + Pygame)",
+    tagline: "Drag-and-drop chess in Pygame",
     description:
       "A visually interactive chess engine with drag-and-drop movement and theming.",
     image: "/projects/pythonchess.png",
@@ -454,8 +525,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/ChessAi",
   },
   {
-    id: 11,
+    id: "email-reply-generator",
     name: "Email Reply Generator",
+    tagline: "AI email replies in Chrome",
     description:
       "AI-powered professional email reply generator with Chrome extension support.",
     image: "/projects/email-writer-app.png",
@@ -472,8 +544,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/email-reply-generator",
   },
   {
-    id: 10,
+    id: "research-assistant-chrome-extension",
     name: "Research Assistant - Chrome Extension",
+    tagline: "Summarise and save any selection",
     description:
       "Chrome extension to summarize selected text instantly and store notes.",
     image: "/projects/research-assistant.png",
@@ -488,8 +561,9 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/research-assistant-chromer",
   },
   {
-    id: 9,
+    id: "inventory-management",
     name: "Inventory Management",
+    tagline: "Inventory system on AWS infrastructure",
     description:
       "Full-stack inventory system deployed on AWS with secure, scalable cloud infra.",
     image: "/projects/inventory.png",
@@ -509,8 +583,9 @@ export const projectData: Project[] = [
     demo: "https://main.d1az7sps7yw18.amplifyapp.com/",
   },
   {
-    id: 8,
+    id: "ai-saas",
     name: "AI-Saas",
+    tagline: "Chat, image, video, code generation",
     description:
       "AI-powered SaaS dashboard with chat, images, video, audio and code generation.",
     image: "/projects/ai-saas.png",
@@ -519,8 +594,9 @@ export const projectData: Project[] = [
     demo: "https://ai-saas-ruby-theta.vercel.app/",
   },
   {
-    id: 7,
+    id: "statistics-dashboard",
     name: "Statistics Dashboard",
+    tagline: "Descriptive statistics, computed live",
     description:
       "React/Next.js dashboard for computing descriptive statistics with smooth UI.",
     image: "/projects/mean-median-mode.png",
@@ -529,8 +605,9 @@ export const projectData: Project[] = [
     demo: "https://mean-median-mode-alpha.vercel.app/",
   },
   {
-    id: 6,
+    id: "chess-web",
     name: "Chess Web",
+    tagline: "Chess built with vanilla JavaScript",
     description: "Chess game built using HTML, CSS, and JavaScript.",
     image: "/projects/chess-web.png",
     technologies: ["HTML", "CSS", "Javascript"],
@@ -538,8 +615,9 @@ export const projectData: Project[] = [
     demo: "https://chess-project.vercel.app/",
   },
   {
-    id: 5,
+    id: "storeit",
     name: "StoreIt",
+    tagline: "Cloud file storage, Drive-style",
     description:
       "Cloud-based file storage app replicating Google Drive core features.",
     image: "/projects/storeit.png",
@@ -548,8 +626,9 @@ export const projectData: Project[] = [
     demo: "https://drive-clone-seven.vercel.app/",
   },
   {
-    id: 4,
+    id: "miro-clone",
     name: "Miro",
+    tagline: "Real-time collaborative whiteboard",
     description:
       "Real-time collaborative whiteboard with Liveblocks, Next.js, and Clerk.",
     image: "/projects/miro.png",
@@ -558,8 +637,9 @@ export const projectData: Project[] = [
     demo: "https://miro-app-psi.vercel.app/",
   },
   {
-    id: 3,
+    id: "todovex",
     name: "Todovex",
+    tagline: "AI-powered task management app",
     description: "AI-powered task management app.",
     image: "/projects/todovex.png",
     technologies: ["Nextjs", "convex", "openai", "Vercel"],
@@ -568,16 +648,18 @@ export const projectData: Project[] = [
   },
 
   {
-    id: 2,
+    id: "26ideas",
     name: "26ideas",
+    tagline: "Company website for 26ideas",
     description: "Company Oriented",
     image: "/projects/26ideas.png",
     technologies: ["Nextjs", "static", "26ideas"],
     demo: "https://www.26ideas.com/",
   },
   {
-    id: 1,
+    id: "data-structures",
     name: "Data Structure",
+    tagline: "Data structures and LeetCode solutions",
     description:
       "Collection of DS implementations paired with LeetCode solutions.",
     image: "/projects/data-structure.png",
@@ -585,14 +667,44 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/DSALeetcode",
   },
   {
-    id: 0,
+    id: "terraform-iaac",
     name: "Terraform IAAC",
+    tagline: "Terraform IaC for AWS provisioning",
     description: "Terraform IaC framework for automated AWS provisioning.",
     image: "/projects/terraform.png",
     technologies: ["Terraform", "AWS", "GitHub Actions"],
     github: "https://github.com/Hitesh-s0lanki/terraform-iaac-vprofile",
   },
 ];
+
+/** Projects surfaced on the home page carousel, in display order. */
+export const featuredProjects = projectData.filter(
+  (project) => project.featured,
+);
+
+/** Look up a project by its slug — the segment of /projects/{id}. */
+export const getProjectById = (id: string) =>
+  projectData.find((project) => project.id === id);
+
+/**
+ * Other projects to suggest at the bottom of a project page: the ones sharing
+ * the most technologies, so the recommendation is never arbitrary.
+ */
+export const getRelatedProjects = (project: Project, limit = 3) => {
+  const stack = new Set(project.technologies.map((tech) => tech.toLowerCase()));
+
+  return projectData
+    .filter((candidate) => candidate.id !== project.id)
+    .map((candidate) => ({
+      candidate,
+      overlap: candidate.technologies.filter((tech) =>
+        stack.has(tech.toLowerCase()),
+      ).length,
+    }))
+    .sort((a, b) => b.overlap - a.overlap)
+    .slice(0, limit)
+    .map(({ candidate }) => candidate);
+};
 
 export const certificates: Certificate[] = [
   {

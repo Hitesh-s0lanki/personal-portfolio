@@ -2,50 +2,90 @@
   {
     "id": 1,
     "role": "Software Engineer Intern",
-    "company": "26ideas (Venture Studio)",
-    "period": "Apr 2024 - Aug 2024",
-    "description": "26ideas is a full-stack venture studio that builds, incubates, and invests in early-stage startups. Built foundational components of CRM tools, including roles management, product categories, subcategories, users, projects, and task management.",
-    "tags": [
-      "Market Research",
-      "Concept Validation",
-      "ChatGPT",
-      "Automation",
-      "CRM",
-      "Python",
-      "Typescript",
-      "Nextjs"
-    ]
+    "company": "26ideas",
+    "logo": "/experience/26ideas.png",
+    "companyTagline": "Venture studio building and incubating early-stage startups",
+    "companyUrl": "https://26ideas.com",
+    "period": "Apr 2024 — Jun 2024",
+    "periodShort": "Apr — Jun 2024",
+    "location": "Mumbai, India",
+    "employmentType": "Internship",
+    "summary": "First engineering role, shipping product inside a studio that spins up new ventures.",
+    "highlights": [
+      "Built the studio CRM's foundations — roles, permissions, categories, projects and tasks.",
+      "Ran market research and concept validation loops for early-stage ideas.",
+      "Automated research and content workflows with Python and LLM tooling."
+    ],
+    "tags": ["Next.js", "TypeScript", "Python", "CRM", "Automation"]
   },
   {
     "id": 2,
     "role": "Software Engineer",
-    "company": "26ideas (Venture Studio)",
-    "period": "Aug 2024 - Apr 2025",
-    "description": "Developed an internal business CRM (crm.26ideas.com) from scratch using Next.js, NestJS, Prisma, PostgreSQL, and OpenAI for AI utilities.",
-    "tags": ["Product", "Engineering", "Development"]
+    "company": "26ideas",
+    "logo": "/experience/26ideas.png",
+    "companyTagline": "Venture studio building and incubating early-stage startups",
+    "companyUrl": "https://26ideas.com",
+    "period": "Jun 2024 — Apr 2025",
+    "periodShort": "Jun 2024 — Apr 2025",
+    "location": "Mumbai, India",
+    "employmentType": "Full-time",
+    "summary": "Owned the studio's internal business CRM end to end, plus the ventures it spun up.",
+    "highlights": [
+      "Built crm.26ideas.com from scratch with Next.js, NestJS, Prisma and PostgreSQL.",
+      "Shipped EventCRM's AI menu planning, and JustWalkIndia's WhatsApp, SMS and ZeroBounce integrations.",
+      "Added OpenAI utilities for drafting, summarising and enriching records."
+    ],
+    "ventures": [
+      {
+        "name": "EventCRM",
+        "logo": "/experience/eventcrm.png",
+        "period": "Jun 2024 — Nov 2024",
+        "description": "AI-assisted menu planning and ingredient lists for catering teams.",
+        "url": "https://sjagtap2408.framer.website/project/eventcrm"
+      },
+      {
+        "name": "JustWalkIndia",
+        "logo": "/experience/justwalkindia.png",
+        "period": "Nov 2024 — Apr 2025",
+        "description": "Walking events and community platform, run on WhatsApp and SMS comms.",
+        "url": "https://justwalkindia.com"
+      }
+    ],
+    "tags": [
+      "Next.js",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
+      "OpenAI",
+      "WhatsApp API"
+    ]
   },
   {
     "id": 3,
-    "role": "Builder",
-    "company": "JustWalkIndia",
-    "period": "Nov 2024 - Apr 2025",
-    "description": "JustWalkIndia is a venture by 26ideas. Led external integrations, including WhatsApp and SMS services partners, and Zerobounce for email validation.",
-    "tags": ["Tech", "Sports", "External", "Operations"]
-  },
-  {
-    "id": 4,
     "role": "Software Engineer",
-    "company": "Strique (Marketing OS)",
-    "period": "June 2025 - Present",
-    "description": "Developed full-stack AI-powered Marketing OS features using Next.js, Python, and PostgreSQL. Architected multi-agent AI workflows and MCP connector system for third-party integrations (GA4, Google Search Console, TikTok, Mailchimp). Designed PostgreSQL schemas for conversation persistence, integrated PostHog analytics, and enabled scalable data access with intelligent query routing and marketing automation.",
+    "company": "Strique",
+    "logo": "/experience/strique.png",
+    "companyTagline": "Agentic AI Marketing OS for ecommerce brands",
+    "companyUrl": "https://strique.io",
+    "period": "Jun 2025 — Present",
+    "periodShort": "Jun 2025 — Now",
+    "location": "Mumbai, India",
+    "employmentType": "Full-time",
+    "current": true,
+    "summary": "Autonomous agents plan, launch and optimise paid media, SEO and creative for D2C brands. I build the AI layer they run on.",
+    "highlights": [
+      "Architected the multi-agent system on the OpenAI Agents SDK — an orchestrator handing off to Meta Ads, Google Ads and creative agents.",
+      "Built the MCP connector layer that plugs agents into GA4, Search Console, TikTok Ads and Mailchimp behind one contract.",
+      "Designed the Postgres model for conversation persistence and agent memory, plus SSE streaming with mid-stream cancellation."
+    ],
     "tags": [
-      "Product",
-      "Java",
-      "Spring Boot",
-      "Protobuf",
-      "Nextjs",
-      "openai-sdk",
-      "PostHog"
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "OpenAI Agents SDK",
+      "MCP",
+      "PostgreSQL",
+      "Protobuf"
     ]
   }
 ]

@@ -33,7 +33,7 @@ Welcome to **Personal Portfolio v2**! This repository contains a modern, interac
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + [shadcn/ui](https://ui.shadcn.com)
 - **Icons**: [Lucide Icons](https://lucide.dev)
-- **AI Agent**: OpenAI GPT model via REST API
+- **AI Agent**: [Vercel AI SDK](https://ai-sdk.dev) + OpenAI, with [Firecrawl](https://firecrawl.dev) web tools
 - **Deployment**: AWS Amplify
 
 ---
@@ -65,19 +65,25 @@ Welcome to **Personal Portfolio v2**! This repository contains a modern, interac
 
 3. **Configure environment variables**
 
-   Create a `.env.local` file at the project root and add:
+   Copy `.env.example` to `.env` and fill it in:
 
    ```env
-   NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key_here
+   OPENAI_API_KEY=your_openai_api_key_here
+   # OPENAI_CHAT_MODEL=gpt-5.4-mini   # optional override
+   FIRECRAWL_API_KEY=your_firecrawl_key_here   # optional, enables web tools
    RESEND_API_KEY=your_resend_api_key_here
    RESEND_FROM_EMAIL=your_verified_email@yourdomain.com
    RESEND_TO_EMAIL=your_email@yourdomain.com
    ```
 
-   **Note**: 
+   **Note**:
+   - `OPENAI_API_KEY` is server-side only — it is never exposed to the browser.
+   - `FIRECRAWL_API_KEY` ([firecrawl.dev](https://firecrawl.dev)) is optional; without
+     it the assistant simply runs without web search and page reading.
    - Get your Resend API key from [resend.com](https://resend.com)
    - Verify your domain or use a verified email address for `RESEND_FROM_EMAIL`
-   - `RESEND_TO_EMAIL` is where contact form submissions will be sent
+   - `RESEND_TO_EMAIL` is where contact form submissions — and the assistant's
+     contact hand-offs — are sent
 
 4. **Run in development mode**
 
@@ -93,11 +99,33 @@ Welcome to **Personal Portfolio v2**! This repository contains a modern, interac
 
 ## 🤖 Personal Portfolio Agent
 
-Navigate to the **Ask Me** section or click the ✨ icon in the navbar to launch the AI chat interface. The agent:
+Click the ✨ launcher in the bottom-right corner of any page to open the assistant.
+The panel has an expand toggle for a roomier view on desktop. The agent runs
+entirely inside this app — no external service.
 
-- **Loads user profile** from a system prompt (`profile.txt`)
-- **Responds to queries** about Hitesh’s background, skills, projects, experience, and certificates
-- **Built with** React (Client Components), `react-hook-form`, and Axios for API calls
+**How it works**
+
+`POST /api/chat` streams a tool-calling loop built on the [Vercel AI SDK](https://ai-sdk.dev)
+with OpenAI as the provider. The client hook flattens the streamed message parts
+into chat bubbles and surfaces whichever tool is running.
+
+| File | Role |
+| --- | --- |
+| [`src/app/api/chat/route.ts`](src/app/api/chat/route.ts) | Streaming endpoint — model, history window, step cap, rate limit |
+| [`src/lib/ai/system-prompt.ts`](src/lib/ai/system-prompt.ts) | Voice, tool policy, formatting rules |
+| [`src/lib/ai/profile.ts`](src/lib/ai/profile.ts) | The always-in-context bio |
+| [`src/lib/ai/tools/`](src/lib/ai/tools/) | Tool definitions |
+| [`src/hooks/use-chat.ts`](src/hooks/use-chat.ts) | Client hook backing the floating widget |
+
+**Tools**
+
+- `listProjects`, `getProject` — the project index and full detail, README included
+- `getExperience`, `listCertificates`, `listBlogs`, `getSkills` — live portfolio data
+- `recordContactRequest`, `recordUnansweredQuestion` — emailed to `RESEND_TO_EMAIL`
+- `searchWeb`, `readWebPage` — Firecrawl, registered only when `FIRECRAWL_API_KEY` is set
+
+Every tool reads the same modules the pages render from, so answers can't drift
+from the site. The Firecrawl fetcher rejects non-HTTP schemes and private hosts.
 
 _Example queries:_
 

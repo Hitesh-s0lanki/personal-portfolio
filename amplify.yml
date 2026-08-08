@@ -13,6 +13,9 @@ frontend:
           env | grep -E
           '^(OPENAI_API_KEY|OPENAI_CHAT_MODEL|FIRECRAWL_API_KEY|RESEND_API_KEY|RESEND_FROM_EMAIL|RESEND_TO_EMAIL|NEXT_PUBLIC_SITE_URL)='
           >> .env.production || true
+        # Names and lengths only — never the values, build logs are readable.
+        - 'if [ -n "$OPENAI_API_KEY" ]; then echo "OPENAI_API_KEY: set (${#OPENAI_API_KEY} chars)"; else echo "OPENAI_API_KEY: MISSING from build env"; fi'
+        - 'echo "written to .env.production:" $(cut -d= -f1 .env.production 2>/dev/null | tr "\n" " ")'
         - npm run build
   artifacts:
     baseDirectory: .next

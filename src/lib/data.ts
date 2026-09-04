@@ -2,6 +2,57 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: "vec-voice-ai",
+    name: "Vec",
+    tagline: "Speak, and be answered out loud",
+    description:
+      "Multilingual voice assistant — speak in any of twenty-two languages and hear a reply about a second after you stop talking. Sarvam's Saaras and Bulbul models handle hearing and speaking, OpenAI writes the replies, and a connectors system lets each user wire in their own vector store, dataset, or tool with no shared corpus.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/voice-vec/main/images/home.png",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Nextjs",
+      "TypeScript",
+      "Sarvam AI",
+      "OpenAI",
+      "pgVector",
+      "Pinecone",
+      "PostgreSQL",
+      "Voice AI",
+      "RAG",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/voice-vec",
+    ribbon: "New",
+    demo: "https://voice-vec.vercel.app",
+    featured: true,
+  },
+  {
+    id: "dioramic",
+    name: "Dioramic",
+    tagline: "Turn a photo into a 3D mesh",
+    description:
+      "Photo-to-3D web app — upload a picture and a rented GPU turns it into a textured mesh, private to your account. Runs open-source models (TripoSR, Hunyuan3D-2.1, GroundingDINO) on Modal, with photos and meshes in Vercel Blob and every run tracked in Neon Postgres.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/3d-opensource-playground/main/images/home.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Three.js",
+      "Python",
+      "Clerk",
+      "Neon",
+      "PostgreSQL",
+      "Vercel Blob",
+      "Modal",
+      "Blender",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/3d-opensource-playground",
+    ribbon: "New",
+    demo: "https://dioramic.vercel.app",
+  },
+  {
     id: "relivo-mcp-server",
     name: "Relivo MCP Server",
     tagline: "Multi-namespace MCP server in Go",
@@ -707,6 +758,15 @@ export const getRelatedProjects = (project: Project, limit = 3) => {
 };
 
 export const certificates: Certificate[] = [
+  {
+    id: 8,
+    name: "Complete C# Masterclass",
+    issuer: "Udemy",
+    date: "2026",
+    image: "/certificates/UC-901f3bd2-34bd-4c81-9035-df5e5e15af43.jpg",
+    category: ["C#", ".NET", "OOP", "Backend"],
+    link: "https://ude.my/UC-901f3bd2-34bd-4c81-9035-df5e5e15af43",
+  },
   {
     id: 7,
     name: "Go (Golang) Masterclass: Learn Like a Google Engineer",

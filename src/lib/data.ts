@@ -2,6 +2,30 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: "klyro",
+    name: "Klyro",
+    tagline: "Redis-compatible in-memory database",
+    description:
+      "Developer-first in-memory database written in Rust. Klyro speaks Redis's RESP protocol and supports familiar data structures, transactions, pub/sub, persistence, eviction policies, and keyword, vector, and hybrid retrieval in the same keyspace.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/klyro/main/images/home.png",
+    technologies: [
+      "Rust",
+      "Redis",
+      "RESP",
+      "Vector Search",
+      "Docker",
+      "Nextjs",
+      "TypeScript",
+      "Python",
+      "Go",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/klyro",
+    demo: "https://python-psi-seven.vercel.app",
+    ribbon: "New",
+    featured: true,
+  },
+  {
     id: "vec-voice-ai",
     name: "Vec",
     tagline: "Speak, and be answered out loud",

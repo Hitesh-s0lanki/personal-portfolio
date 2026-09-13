@@ -15,6 +15,7 @@ import {
 import Navbar from "./(root)/_components/navbar";
 import Footer from "./(root)/_components/footer";
 import ChatWidget from "@/components/chat/chat-widget";
+import NewProjectAnnouncement from "@/components/new-project-announcement";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -105,6 +106,7 @@ export default function RootLayout({
         <Footer />
         <ChatWidget />
         <Toaster />
+        <NewProjectAnnouncement />
         <GoogleAnalytics gaId="G-PXR24BFQ8T" />
       </body>
     </html>

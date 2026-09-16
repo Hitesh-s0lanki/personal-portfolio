@@ -16,6 +16,7 @@ import Navbar from "./(root)/_components/navbar";
 import Footer from "./(root)/_components/footer";
 import ChatWidget from "@/components/chat/chat-widget";
 import NewProjectAnnouncement from "@/components/new-project-announcement";
+import RouteChrome from "@/components/route-chrome";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -101,9 +102,9 @@ export default function RootLayout({
       <body className={font.className}>
         <JsonLd data={[personJsonLd, websiteJsonLd]} />
         <SheetProvider />
-        <Navbar />
+        <RouteChrome><Navbar /></RouteChrome>
         {children}
-        <Footer />
+        <RouteChrome><Footer /></RouteChrome>
         <ChatWidget />
         <Toaster />
         <NewProjectAnnouncement />

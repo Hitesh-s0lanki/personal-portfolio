@@ -24,12 +24,12 @@ export const profileSummary = `
 
 Software engineer with 2+ years of hands-on experience shipping full-stack,
 AI-powered, and cloud-native products. Currently a Software Engineer at Strique
-(Jun 2025 – present), building the AI layer of an e-commerce analytics platform —
-agentic reporting, MCP servers, and FastAPI services behind a Next.js dashboard.
-Before that, spent Apr 2024 – Apr 2025 at 26ideas, a venture studio, going from
-intern to engineering lead: an internal CRM, RAG-based contextual search over
-Gmail, WhatsApp automations, and the studio's own ventures (EventCRM,
-JustWalkIndia).
+(Jul 2025 – present), building its Agentic Marketing OS across product, platform,
+analytics, and applied AI.
+Before that, spent Apr 2024 – Apr 2025 at 26ideas, a venture studio, building
+EventCRM, JustWalkIndia, and AICRM through build, measure, and learn cycles. He
+owned AICRM end to end, including its RAG based context layer and structured
+idea intake workflow.
 
 The through-line is systems that do real work: Go and TypeScript services,
 event-driven backends, and LLM agents wired to actual tools rather than demos.

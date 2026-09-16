@@ -10,17 +10,18 @@
     "periodShort": "Apr — Jun 2024",
     "location": "Mumbai, India",
     "employmentType": "Internship",
-    "summary": "First engineering role, shipping product inside a studio that spins up new ventures.",
+    "summary": "Joined the venture studio at the idea validation stage, helping turn early concepts into testable product workflows.",
     "highlights": [
-      "Built the studio CRM's foundations — roles, permissions, categories, projects and tasks.",
-      "Ran market research and concept validation loops for early-stage ideas.",
-      "Automated research and content workflows with Python and LLM tooling."
+      "Built the first AICRM foundations for roles, permissions, categories, projects, and tasks.",
+      "Helped structure the idea intake workflow so teams could capture a concept, identify missing context, and prepare follow up questions.",
+      "Supported market research and concept validation through rapid build, measure, and learn cycles.",
+      "Automated research and content workflows using Python and LLM tooling."
     ],
-    "tags": ["Next.js", "TypeScript", "Python", "CRM", "Automation"]
+    "tags": ["Next.js", "TypeScript", "Python", "AICRM", "Product Discovery", "Automation"]
   },
   {
     "id": 2,
-    "role": "Software Engineer",
+    "role": "Software Engineer • Full-Stack & Applied AI",
     "company": "26ideas",
     "logo": "/experience/26ideas.png",
     "companyTagline": "Venture studio building and incubating early-stage startups",
@@ -29,11 +30,13 @@
     "periodShort": "Jun 2024 — Apr 2025",
     "location": "Mumbai, India",
     "employmentType": "Full-time",
-    "summary": "Owned the studio's internal business CRM end to end, plus the ventures it spun up.",
+    "summary": "Built products from 0 to 1 inside a venture studio, using the build, measure, and learn loop across EventCRM, JustWalkIndia, and AICRM.",
     "highlights": [
-      "Built crm.26ideas.com from scratch with Next.js, NestJS, Prisma and PostgreSQL.",
-      "Shipped EventCRM's AI menu planning, and JustWalkIndia's WhatsApp, SMS and ZeroBounce integrations.",
-      "Added OpenAI utilities for drafting, summarising and enriching records."
+      "Worked across three ventures, turning early ideas into usable products through continuous building, measurement, and customer learning.",
+      "Owned AICRM end to end as an internal AI powered project management platform for the venture studio.",
+      "Added a RAG layer and business integrations to make project and company context accessible inside CRM workflows.",
+      "Designed the complete idea intake flow, from the initial submission to identifying information gaps and generating the next set of contextual questions.",
+      "Delivered EventCRM's AI assisted menu planning and JustWalkIndia's WhatsApp, SMS, and email validation integrations."
     ],
     "ventures": [
       {
@@ -49,6 +52,12 @@
         "period": "Nov 2024 — Apr 2025",
         "description": "Walking events and community platform, run on WhatsApp and SMS comms.",
         "url": "https://justwalkindia.com"
+      },
+      {
+        "name": "AICRM",
+        "logo": "/experience/26ideas.png",
+        "period": "Jun 2024 — Apr 2025",
+        "description": "Internal AI powered project management CRM with RAG based context and structured idea intake workflows."
       }
     ],
     "tags": [
@@ -57,6 +66,7 @@
       "Prisma",
       "PostgreSQL",
       "OpenAI",
+      "RAG",
       "WhatsApp API"
     ]
   },
@@ -67,25 +77,29 @@
     "logo": "/experience/strique.png",
     "companyTagline": "Agentic AI Marketing OS for ecommerce brands",
     "companyUrl": "https://strique.io",
-    "period": "Jun 2025 — Present",
-    "periodShort": "Jun 2025 — Now",
+    "period": "Jul 2025 – Present",
+    "periodShort": "Jul 2025 – Now",
     "location": "Mumbai, India",
     "employmentType": "Full-time",
     "current": true,
-    "summary": "Autonomous agents plan, launch and optimise paid media, SEO and creative for D2C brands. I build the AI layer they run on.",
+    "summary": "Building Strique's Agentic Marketing OS across product, platform, analytics, and applied AI.",
     "highlights": [
-      "Architected the multi-agent system on the OpenAI Agents SDK — an orchestrator handing off to Meta Ads, Google Ads and creative agents.",
-      "Built the MCP connector layer that plugs agents into GA4, Search Console, TikTok Ads and Mailchimp behind one contract.",
-      "Designed the Postgres model for conversation persistence and agent memory, plus SSE streaming with mid-stream cancellation."
+      "Took features from Next.js screens through Python services and MCP connectors, working across frontend and backend.",
+      "Reworked onboarding to generate Brand DNA in the background and inject persistent brand context into AI agents.",
+      "Instrumented key user journeys with PostHog, added production error tracking, and built Meta CAPI delivery diagnostics.",
+      "Worked with marketers to turn Google Ads, GA4, Search Console, and Merchant Center workflows into production agents.",
+      "Built MCP integrations connecting agents with live marketing platforms and business data.",
+      "Added approval flows, evidence checks, and failure tracking to make campaign and analytics agents safer in production."
     ],
     "tags": [
       "Next.js",
       "Python",
       "FastAPI",
-      "OpenAI Agents SDK",
       "MCP",
-      "PostgreSQL",
-      "Protobuf"
+      "PostHog",
+      "Meta CAPI",
+      "Google Ads",
+      "GA4"
     ]
   }
 ]

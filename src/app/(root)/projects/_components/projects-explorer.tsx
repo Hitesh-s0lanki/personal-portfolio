@@ -15,6 +15,7 @@ import {
 } from "./project-categories";
 import ProjectListItem from "./project-list-item";
 import ProjectsToolbar, { ViewMode } from "./projects-toolbar";
+import { trackEvent } from "@/lib/analytics";
 
 /** How many projects are rendered before the reader asks for more. */
 const PAGE_SIZE = 12;
@@ -83,6 +84,9 @@ const ProjectsExplorer = () => {
   }, []);
 
   const changeCategory = (next: ProjectCategoryId) => {
+    if (next !== category) {
+      trackEvent("project_filter_select", { category: next });
+    }
     setCategory(next);
 
     // If the reader is already deep in the list, bring the new results into

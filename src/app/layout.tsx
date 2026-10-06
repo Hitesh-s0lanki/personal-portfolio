@@ -17,6 +17,8 @@ import Footer from "./(root)/_components/footer";
 import ChatWidget from "@/components/chat/chat-widget";
 import NewProjectAnnouncement from "@/components/new-project-announcement";
 import RouteChrome from "@/components/route-chrome";
+import FloatingSocialLinks from "@/components/floating-social-links";
+import AnalyticsEvents from "@/components/analytics-events";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -106,9 +108,11 @@ export default function RootLayout({
         {children}
         <RouteChrome><Footer /></RouteChrome>
         <ChatWidget />
+        <RouteChrome><FloatingSocialLinks /></RouteChrome>
         <Toaster />
         <NewProjectAnnouncement />
         <GoogleAnalytics gaId="G-PXR24BFQ8T" />
+        <AnalyticsEvents />
       </body>
     </html>
   );

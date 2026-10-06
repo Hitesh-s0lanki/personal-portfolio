@@ -12,6 +12,7 @@ const staticRoutes: Route[] = [
   { path: "/", changeFrequency: "monthly", priority: 1 },
   { path: "/projects", changeFrequency: "weekly", priority: 0.9 },
   { path: "/projects/relivo", changeFrequency: "weekly", priority: 0.8 },
+  { path: "/idea/chalzi", changeFrequency: "monthly", priority: 0.7 },
   { path: "/blogs", changeFrequency: "weekly", priority: 0.8 },
   { path: "/resume", changeFrequency: "monthly", priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly", priority: 0.6 },

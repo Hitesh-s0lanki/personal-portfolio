@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { CHAT_SUGGESTIONS } from "@/constants/chat-suggestions";
 import { useChat } from "@/hooks/use-chat";
 import { cn } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 const MAX_TEXTAREA_LINES = 4;
 const LINE_HEIGHT = 22;
@@ -76,6 +77,7 @@ const ChatWidget = () => {
 
   const submit = (value: string) => {
     if (!value.trim() || loading) return;
+    trackEvent("chat_message_submit");
     sendMessage(value);
     setPrompt("");
     if (textareaRef.current) textareaRef.current.style.height = "auto";
@@ -106,7 +108,10 @@ const ChatWidget = () => {
 
         <button
           type="button"
-          onClick={() => setIsOpen((open) => !open)}
+          onClick={() => {
+            if (!isOpen) trackEvent("chat_open");
+            setIsOpen((open) => !open);
+          }}
           aria-label={isOpen ? "Close assistant" : "Open assistant"}
           aria-expanded={isOpen}
           className="relative flex size-13 items-center justify-center rounded-full bg-gradient-to-r from-[#f97316] to-[#9b4819] text-white shadow-lg shadow-[#9b4819]/30 transition-transform hover:scale-105 active:scale-95 sm:size-14"

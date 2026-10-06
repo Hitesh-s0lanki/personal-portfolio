@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { toast } from "sonner";
+import { trackEvent } from "@/lib/analytics";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -47,6 +48,8 @@ const ContactSection = () => {
       if (!response.ok) {
         throw new Error(data.error || "Failed to send message");
       }
+
+      trackEvent("contact_form_submit", { form_location: "home_page" });
 
       toast.success("Message sent successfully!", {
         description: "Thank you for your message! I'll get back to you soon.",

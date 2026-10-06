@@ -8,6 +8,7 @@ import { Mail, Linkedin, Github, Phone, Send, MapPin } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "sonner";
+import { trackEvent } from "@/lib/analytics";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -46,6 +47,8 @@ const ContactPage = () => {
       if (!response.ok) {
         throw new Error(data.error || "Failed to send message");
       }
+
+      trackEvent("contact_form_submit", { form_location: "contact_page" });
 
       toast.success("Message sent successfully!", {
         description: "Thank you for your message! I'll get back to you soon.",

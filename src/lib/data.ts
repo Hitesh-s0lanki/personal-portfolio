@@ -2,6 +2,30 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: "veyra",
+    name: "Veyra",
+    tagline: "AI video generation platform",
+    description:
+      "Create videos from text prompts or images with a Next.js frontend and FastAPI service. Veyra dispatches generation jobs to on-demand Modal GPU workers, stores private results in S3, and offers a hosted MCP server for agent integrations.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/veyra/main/images/home.png",
+    technologies: [
+      "Nextjs",
+      "TypeScript",
+      "Python",
+      "FastAPI",
+      "Modal",
+      "PostgreSQL",
+      "AWS S3",
+      "MCP",
+      "Clerk",
+      "AI",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/veyra",
+    ribbon: "New",
+    featured: true,
+  },
+  {
     id: "klyro",
     name: "Klyro",
     tagline: "Redis-compatible in-memory database",

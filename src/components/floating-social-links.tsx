@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  IconApps,
   IconBrandGithub,
   IconBrandLeetcode,
   IconBrandLinkedin,
@@ -8,7 +9,7 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { siteConfig } from "@/lib/seo";
 
 const links = [
@@ -92,6 +93,7 @@ function QuickLinks({
 export default function FloatingSocialLinks() {
   const [expanded, setExpanded] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const linksId = useId();
 
   useEffect(() => {
     if (!expanded) return;
@@ -111,12 +113,6 @@ export default function FloatingSocialLinks() {
         ref={navRef}
         aria-label="Quick links"
         className="fixed bottom-5 left-5 z-40 flex flex-col-reverse items-start sm:hidden"
-        onPointerEnter={(event) => {
-          if (event.pointerType === "mouse") setExpanded(true);
-        }}
-        onPointerLeave={(event) => {
-          if (event.pointerType === "mouse") setExpanded(false);
-        }}
         onBlur={(event) => {
           if (!event.currentTarget.contains(event.relatedTarget))
             setExpanded(false);
@@ -132,37 +128,19 @@ export default function FloatingSocialLinks() {
           type="button"
           aria-label={expanded ? "Hide quick links" : "Show quick links"}
           aria-expanded={expanded}
-          onClick={(event) => {
-            if ((event.nativeEvent as PointerEvent).pointerType !== "mouse") {
-              setExpanded((value) => !value);
-            }
-          }}
+          aria-controls={linksId}
+          onClick={() => setExpanded((value) => !value)}
           className="relative isolate flex size-11 items-center justify-center rounded-full bg-[#24292f] text-white shadow-[0_3px_12px_rgba(36,41,47,0.28)] transition-[scale,box-shadow] duration-150 hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#9b4819] active:scale-96"
         >
-          {!expanded && (
-            <>
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 -translate-y-2 rounded-full bg-[#2f355b]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 -translate-x-1.5 -translate-y-1.5 rounded-full bg-[#0a66c2]"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 -z-10 -translate-x-1 -translate-y-1 rounded-full bg-[#ffa116]"
-              />
-            </>
-          )}
           {expanded ? (
             <IconChevronDown size={22} stroke={1.8} aria-hidden="true" />
           ) : (
-            <IconBrandGithub size={22} stroke={1.8} aria-hidden="true" />
+            <IconApps size={22} stroke={1.8} aria-hidden="true" />
           )}
         </button>
 
         <div
+          id={linksId}
           aria-hidden={!expanded}
           className={`grid transition-[grid-template-rows,opacity] duration-200 motion-reduce:transition-none ${expanded ? "grid-rows-[1fr] opacity-100" : "pointer-events-none grid-rows-[0fr] opacity-0"}`}
         >

@@ -29,7 +29,7 @@ const SocialCard = () => {
               width={50}
               className="text-white size-10"
             />
-            <Link href="https://leetcode.com/u/hitesh4623/" target="_blank">
+            <Link href="https://leetcode.com/u/hiteshs0lanki/" target="_blank">
               <ExternalLink className="text-white size-5" />
             </Link>
           </div>

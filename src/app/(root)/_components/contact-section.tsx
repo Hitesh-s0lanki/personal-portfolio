@@ -191,7 +191,7 @@ const ContactSection = () => {
                       asChild
                     >
                       <Link
-                        href="https://leetcode.com/u/hitesh4623/"
+                        href="https://leetcode.com/u/hiteshs0lanki/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

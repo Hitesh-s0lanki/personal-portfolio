@@ -33,7 +33,7 @@ export const siteConfig = {
   socials: {
     github: "https://github.com/Hitesh-s0lanki",
     linkedin: "https://www.linkedin.com/in/hitesh-s0lanki/",
-    leetcode: "https://leetcode.com/u/hitesh4623/",
+    leetcode: "https://leetcode.com/u/hiteshs0lanki/",
     medium: "https://medium.com/@hiteshsolanki4623",
   },
 } as const;

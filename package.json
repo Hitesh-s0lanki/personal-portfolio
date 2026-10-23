@@ -21,7 +21,7 @@
     "@ai-sdk/openai": "^4.0.29",
     "@ai-sdk/react": "^4.0.54",
     "@dicebear/collection": "^9.2.4",
-    "@dicebear/core": "^9.2.4",
+    "@dicebear/core": "^9.4.2",
     "@hookform/resolvers": "^5.2.2",
     "@mendable/firecrawl-js": "^4.32.0",
     "@next/third-parties": "^15.4.1",

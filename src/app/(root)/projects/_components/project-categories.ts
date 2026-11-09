@@ -1,6 +1,13 @@
 import { Project } from "@/type";
 
-export type ProjectCategoryId = "all" | "ai" | "web" | "backend" | "cloud" | "data";
+export type ProjectCategoryId =
+  | "all"
+  | "ai"
+  | "web"
+  | "backend"
+  | "cloud"
+  | "data"
+  | "system-design";
 
 /**
  * The project data carries 130+ free-text technology strings ("openai", "OpenAI",
@@ -16,6 +23,11 @@ interface CategoryDefinition {
 }
 
 const CATEGORY_DEFINITIONS: CategoryDefinition[] = [
+  {
+    id: "system-design",
+    label: "System Design",
+    technologies: ["system design"],
+  },
   {
     id: "ai",
     label: "AI & Agents",

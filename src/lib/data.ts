@@ -2,6 +2,27 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
+    id: "system-arch",
+    name: "SystemArch",
+    tagline: "System design workbench",
+    description:
+      "System design workbench with a Next.js frontend, a distributed rate limiter in Go with RAM or Redis storage, a Docker-based k6 load tester, and a video streaming service.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/system-arch/main/frontend/public/logo.png",
+    technologies: [
+      "System Design",
+      "Go",
+      "Nextjs",
+      "TypeScript",
+      "Redis",
+      "Docker",
+      "k6",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/system-arch",
+    demo: "https://system-arch-bice.vercel.app",
+    ribbon: "New",
+  },
+  {
     id: "veyra",
     name: "Veyra",
     tagline: "AI video generation platform",

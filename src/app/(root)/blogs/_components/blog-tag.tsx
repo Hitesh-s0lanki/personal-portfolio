@@ -2,6 +2,7 @@ import {
   normalizeTechTag,
   TECH_STACK_ICON_LINKS,
 } from "@/constants/tech-stack-icons";
+import { IconBrandOpenai } from "@tabler/icons-react";
 import { Code2 } from "lucide-react";
 
 interface BlogTagProps {
@@ -14,7 +15,9 @@ export const BlogTag = ({ tag }: BlogTagProps) => {
 
   return (
     <span className="inline-flex items-center gap-1.5 rounded-full border border-orange-200/70 bg-orange-50 px-2.5 py-1 text-xs font-medium text-[#8a3f15]">
-      {tagIconLink ? (
+      {normalizedTag === "openai" ? (
+        <IconBrandOpenai className="h-3.5 w-3.5" aria-hidden="true" />
+      ) : tagIconLink ? (
         <span
           aria-hidden
           className="h-3.5 w-3.5 bg-contain bg-center bg-no-repeat"

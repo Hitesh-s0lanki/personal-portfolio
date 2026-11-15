@@ -1,14 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import NavigationSheet from "@/components/sheets/navigation-sheet";
 
-const SheetProvider = () => {
-  const [isMounted, setIsMounted] = useState(false);
+const subscribe = () => () => {};
+const getSnapshot = () => true;
+const getServerSnapshot = () => false;
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+const SheetProvider = () => {
+  const isMounted = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   if (!isMounted) return null;
 

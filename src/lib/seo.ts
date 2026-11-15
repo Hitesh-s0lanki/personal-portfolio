@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://master.d2p4p6tfmpfvri.amplifyapp.com"
+  "https://hiteshsolanki.com"
 ).replace(/\/$/, "");
 
 export const siteConfig = {
@@ -10,7 +10,7 @@ export const siteConfig = {
   title: "Hitesh Solanki — Software Engineer & AI Builder",
   shortName: "Hitesh Solanki",
   description:
-    "Portfolio of Hitesh Solanki, a software engineer building full-stack products and AI agent systems with Next.js, TypeScript, Go, and LangChain. Explore projects, experience, writing, and certifications.",
+    "Hitesh Solanki is a software engineer in Mumbai working on AI agents, Go backends, and Next.js apps. His portfolio includes code, demos, and technical writing.",
   role: "Software Engineer",
   location: "Mumbai, India",
   email: "hiteshsolanki@gmail.com",
@@ -84,30 +84,33 @@ export const buildMetadata = ({
 }: PageSeo): Metadata => {
   const url = absoluteUrl(path);
   const image = ogImageUrl({ title, subtitle: description, eyebrow });
+  const pageTitle = title === siteConfig.title ? title : `${title} | ${siteConfig.name}`;
 
   return {
     // `absolute` pins this segment's own title; `template` is re-declared so
     // nested segments (e.g. /projects/relivo) still inherit the name suffix.
     title: {
-      absolute: `${title} | ${siteConfig.name}`,
+      absolute: pageTitle,
       template: `%s | ${siteConfig.name}`,
     },
     description,
     keywords: keywords ?? [...siteConfig.keywords],
     alternates: { canonical: url },
-    ...(noIndex ? { robots: { index: false, follow: false } } : {}),
+    ...(noIndex
+      ? { robots: { index: false, follow: true, googleBot: { index: false, follow: true } } }
+      : {}),
     openGraph: {
       type: "website",
       url,
       siteName: siteConfig.name,
       locale: siteConfig.locale,
-      title: `${title} | ${siteConfig.name}`,
+      title: pageTitle,
       description,
       images: [{ url: image, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${title} | ${siteConfig.name}`,
+      title: pageTitle,
       description,
       images: [image],
     },

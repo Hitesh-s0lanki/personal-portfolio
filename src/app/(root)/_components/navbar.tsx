@@ -85,11 +85,14 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <Menu
-          className="size-8 cursor-pointer"
+        <button
+          type="button"
+          className="flex size-11 cursor-pointer items-center justify-center rounded-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#9b4819]"
           onClick={onOpenNavigation}
           aria-label="Open menu"
-        />
+        >
+          <Menu className="size-8" aria-hidden="true" />
+        </button>
       </div>
     </div>
   );

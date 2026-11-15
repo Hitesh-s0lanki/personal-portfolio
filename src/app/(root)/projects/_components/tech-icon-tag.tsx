@@ -50,17 +50,12 @@ const techIconMap: Record<string, Icon> = {
   streamlit: IconDeviceDesktopCode,
 };
 
-const getTechIcon = (tech: string): Icon => {
-  const key = tech.toLowerCase();
-  return techIconMap[key] ?? IconCode;
-};
-
 interface TechIconTagProps {
   tech: string;
 }
 
 const TechIconTag = ({ tech }: TechIconTagProps) => {
-  const TechIcon = getTechIcon(tech);
+  const TechIcon = techIconMap[tech.toLowerCase()] ?? IconCode;
 
   return (
     <span

@@ -42,7 +42,7 @@ Welcome to **Personal Portfolio v2**! This repository contains a modern, interac
 
 ### Prerequisites
 
-- Node.js v18 or higher
+- Node.js 22 (`nvm use` selects the version in `.nvmrc`)
 - npm or yarn
 - An OpenAI API key with access to GPT-4 or GPT-3.5
 
@@ -93,7 +93,7 @@ Welcome to **Personal Portfolio v2**! This repository contains a modern, interac
    yarn dev
    ```
 
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+   Open [http://localhost:3002](http://localhost:3002) in your browser.
 
 ---
 
@@ -137,7 +137,12 @@ _Example queries:_
 
 ## 📦 Deployment
 
-This app is deployed on AWS Amplify. To update the live site:
+This app is deployed on AWS Amplify. This project now uses Next.js 16.4.6.
+AWS currently documents managed SSR support through Next.js 15; confirm
+Next.js 16 support before deploying this upgrade to Amplify. See
+[Amplify's Next.js support documentation](https://docs.aws.amazon.com/amplify/latest/userguide/ssr-amplify-support.html).
+
+Once hosting compatibility is confirmed, update the live site:
 
 1. Push changes to the `main` branch.
 2. AWS Amplify automatically builds and deploys your updates.

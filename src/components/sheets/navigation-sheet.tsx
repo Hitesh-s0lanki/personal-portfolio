@@ -1,5 +1,5 @@
 import { usePathname, useRouter } from "next/navigation";
-import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetTitle } from "@/components/ui/sheet";
 import { useNavigationSheet } from "@/hooks/use-navigation-sheet";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
@@ -21,7 +21,10 @@ const NavigationSheet = () => {
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
       <SheetContent className="w-72 h-full">
-        <SheetTitle></SheetTitle>
+        <SheetTitle className="sr-only">Navigation</SheetTitle>
+        <SheetDescription className="sr-only">
+          Choose a section of the portfolio.
+        </SheetDescription>
         <div className=" w-full h-full  flex flex-col justify-between">
           <div>
             <div className=" mt-5 flex py-5 px-5 flex-col gap-2 text-2xl  p-1">

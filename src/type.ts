@@ -5,6 +5,8 @@ export interface Project {
   /** What the project is, in five words or fewer. Used as a card label. */
   tagline: string;
   description: string;
+  /** Concise search and social preview text; the full description stays on the page. */
+  seoDescription?: string;
   image: string;
   /**
    * Wide image used by the 3D featured carousel. Falls back to `image`; set it

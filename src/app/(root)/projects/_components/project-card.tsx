@@ -13,8 +13,7 @@ interface ProjectCardProps {
 
 /**
  * Compact grid card. The list view shows one project per row; this one packs
- * three per row on a wide screen so 41 projects stay browsable instead of
- * turning the page into a ten-thousand-pixel scroll.
+ * three per row on a wide screen. Images below the first row load lazily.
  */
 const ProjectCard = ({ project, index = 0, priority = false }: ProjectCardProps) => {
   const isInternalDemo = project.demo?.startsWith("/");

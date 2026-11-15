@@ -49,6 +49,9 @@ export const useChat = () => {
   const loading = status === "submitted" || status === "streaming";
 
   const messages = useMemo<Message[]>(() => {
+    // This ref only caches display timestamps by immutable message ID; it does
+    // not control rendering or synchronize application state.
+    // eslint-disable-next-line react-hooks/refs
     const flattened: Message[] = uiMessages.map((message) => {
       let timestamp = timestamps.current.get(message.id);
       if (!timestamp) {

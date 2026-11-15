@@ -12,9 +12,9 @@ import { BlogListItem } from "./_components/blog-list-item";
 import { BlogsHeader } from "./_components/blogs-header";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blogs",
+  title: "AI & Software Engineering Writing",
   description:
-    "Technical writing by Hitesh Solanki on agentic AI systems, LangChain, full-stack architecture, and shipping real products — with previews and the stack behind each build.",
+    "Read Hitesh Solanki's technical articles on LangChain agents, AI authentication, Shopify storefronts, and the engineering behind his full-stack projects.",
   path: "/blogs",
   eyebrow: "Writing",
   keywords: [
@@ -45,7 +45,7 @@ const blogsJsonLd = {
 
 const BlogsPage = () => {
   return (
-    <div className="min-h-screen w-full ">
+    <main className="min-h-screen w-full ">
       <JsonLd
         data={[
           blogsJsonLd,
@@ -64,7 +64,7 @@ const BlogsPage = () => {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

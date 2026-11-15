@@ -41,21 +41,29 @@ const readCachedReadme = async ({ owner, repo }: GitHubRepo) => {
 };
 
 const fetchRemoteReadme = async ({ owner, repo }: GitHubRepo) => {
-  try {
-    const response = await fetch(
-      `https://raw.githubusercontent.com/${owner}/${repo}/HEAD/README.md`,
-      {
-        headers: { "User-Agent": "personal-portfolio-readme-loader" },
+  // The API resolves README filename casing (e.g. Readme.md). Keep the raw
+  // endpoint as the first attempt so normal builds don't use GitHub API quota.
+  for (const url of [
+    `https://raw.githubusercontent.com/${owner}/${repo}/HEAD/README.md`,
+    `https://api.github.com/repos/${owner}/${repo}/readme`,
+  ]) {
+    try {
+      const response = await fetch(url, {
+        headers: {
+          "User-Agent": "personal-portfolio-readme-loader",
+          Accept: "application/vnd.github.raw+json",
+        },
+        signal: AbortSignal.timeout(10_000),
         next: { revalidate: 60 * 60 * 24 },
-      },
-    );
-
-    if (!response.ok) return null;
-    const content = await response.text();
-    return content.trim() ? content : null;
-  } catch {
-    return null;
+      });
+      if (!response.ok) continue;
+      const content = await response.text();
+      if (content.trim()) return content;
+    } catch {
+      // A failed endpoint must not prevent the remaining fallback from running.
+    }
   }
+  return null;
 };
 
 /**

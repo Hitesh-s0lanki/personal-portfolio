@@ -1,12 +1,15 @@
 "use client";
 
 import { Database } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { toast } from "sonner";
 
 const ANNOUNCEMENT_KEY = "portfolio-project-announcement:klyro:v2";
 
 const NewProjectAnnouncement = () => {
+  const router = useRouter();
+
   useEffect(() => {
     try {
       if (window.localStorage.getItem(ANNOUNCEMENT_KEY)) return;
@@ -25,7 +28,7 @@ const NewProjectAnnouncement = () => {
       icon: <Database className="size-4 text-[#9b4819]" aria-hidden="true" />,
       action: {
         label: "Explore",
-        onClick: () => window.location.assign("/projects/klyro"),
+        onClick: () => router.push("/projects/klyro"),
       },
       position: "top-right",
       duration: 12_000,
@@ -37,7 +40,7 @@ const NewProjectAnnouncement = () => {
         actionButton: "bg-[#9b4819]! text-white! hover:bg-[#7a3914]!",
       },
     });
-  }, []);
+  }, [router]);
 
   return null;
 };

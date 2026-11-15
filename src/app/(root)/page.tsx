@@ -39,7 +39,7 @@ const profileJsonLd = {
 
 const Home = () => {
   return (
-    <div className=" min-h-screen w-full flex flex-col relative">
+    <main className=" min-h-screen w-full flex flex-col relative">
       <JsonLd data={profileJsonLd} />
       <Hero />
       <div className=" px-5 md:px-10 lg:px-40 py-5 md:py-20 lg:py-20 w-full flex flex-col gap-10 md:gap-20 lg:gap-20 fadeInDown-animation">
@@ -83,7 +83,7 @@ const Home = () => {
       </div>
 
       <ContactSection />
-    </div>
+    </main>
   );
 };
 

@@ -2,8 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { projectData } from "@/lib/data";
-import { cn } from "@/lib/utils";
-import { FolderOpen, Plus, SearchX } from "lucide-react";
+import { FolderOpen, SearchX } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import BackToTop from "./back-to-top";
 import ProjectCard from "./project-card";
@@ -17,9 +16,6 @@ import ProjectListItem from "./project-list-item";
 import ProjectsToolbar, { ViewMode } from "./projects-toolbar";
 import { trackEvent } from "@/lib/analytics";
 
-/** How many projects are rendered before the reader asks for more. */
-const PAGE_SIZE = 12;
-
 /** Featured first, original data order preserved within each group. */
 const sortFeaturedFirst = (projects: typeof projectData) =>
   [...projects].sort(
@@ -30,7 +26,6 @@ const ProjectsExplorer = () => {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<ProjectCategoryId>("all");
   const [view, setView] = useState<ViewMode>("grid");
-  const [visible, setVisible] = useState(PAGE_SIZE);
   const [stuck, setStuck] = useState(false);
 
   const sentinelRef = useRef<HTMLDivElement>(null);
@@ -38,8 +33,7 @@ const ProjectsExplorer = () => {
 
   const categories = useMemo(() => buildCategories(projectData), []);
 
-  // Search index built once — 41 projects, but rebuilding the haystack on every
-  // keystroke is still needless work.
+  // Keep every project in the initial HTML; filters only narrow the directory.
   const index = useMemo(
     () =>
       projectData.map((project) => ({
@@ -62,11 +56,6 @@ const ProjectsExplorer = () => {
 
     return sortFeaturedFirst(matched);
   }, [index, query, category]);
-
-  // A new filter means a new list — start it from the top again.
-  useEffect(() => {
-    setVisible(PAGE_SIZE);
-  }, [query, category]);
 
   // Track when the toolbar leaves the flow so it can pick up its glass
   // background only while it is actually pinned.
@@ -102,8 +91,6 @@ const ProjectsExplorer = () => {
     setCategory("all");
   };
 
-  const shown = results.slice(0, visible);
-  const remaining = results.length - shown.length;
   const isFiltered = category !== "all" || query.trim().length > 0;
 
   return (
@@ -129,23 +116,23 @@ const ProjectsExplorer = () => {
             <>
               {view === "grid" ? (
                 <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-                  {shown.map((project, position) => (
+                  {results.map((project, position) => (
                     <ProjectCard
                       key={project.id}
                       project={project}
-                      index={position % PAGE_SIZE}
+                      index={position}
                       priority={position < 3}
                     />
                   ))}
                 </div>
               ) : (
                 <div className="flex flex-col gap-4">
-                  {shown.map((project, position) => (
+                  {results.map((project, position) => (
                     <div
                       key={project.id}
                       className="project-reveal"
                       style={{
-                        animationDelay: `${Math.min(position % PAGE_SIZE, 8) * 45}ms`,
+                        animationDelay: `${Math.min(position, 8) * 45}ms`,
                       }}
                     >
                       <ProjectListItem project={project} />
@@ -154,38 +141,11 @@ const ProjectsExplorer = () => {
                 </div>
               )}
 
-              {/* Paged on purpose: an explicit control beats an infinite scroll
-                  that keeps the footer out of reach. */}
               <div className="mt-10 flex flex-col items-center gap-3">
                 <p className="text-xs text-gray-400 tabular-nums">
-                  Showing {shown.length} of {results.length}
+                  Showing {results.length}
                   {isFiltered ? ` matching project${results.length === 1 ? "" : "s"}` : " projects"}
                 </p>
-
-                {remaining > 0 && (
-                  <Button
-                    variant="outline"
-                    onClick={() => setVisible((count) => count + PAGE_SIZE)}
-                    className="cursor-pointer rounded-full border-gray-300 px-6 text-sm transition-colors hover:border-[#9b4819]/40 hover:bg-orange-50/60 hover:text-[#9b4819]"
-                  >
-                    <Plus className="mr-1.5 size-4" />
-                    Show {Math.min(remaining, PAGE_SIZE)} more
-                  </Button>
-                )}
-
-                <div
-                  className={cn(
-                    "h-1 w-40 overflow-hidden rounded-full bg-gray-100",
-                    results.length <= PAGE_SIZE && "invisible",
-                  )}
-                >
-                  <div
-                    className="h-full rounded-full bg-[#9b4819]/60 transition-[width] duration-500"
-                    style={{
-                      width: `${Math.round((shown.length / results.length) * 100)}%`,
-                    }}
-                  />
-                </div>
               </div>
             </>
           ) : (

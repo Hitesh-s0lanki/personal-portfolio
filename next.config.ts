@@ -1,8 +1,16 @@
 import type { NextConfig } from "next";
-import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
 
-const baseConfig: NextConfig = {
+const nextConfig: NextConfig = {
   devIndicators: false,
+  async redirects() {
+    return [
+      {
+        source: "/projects/gadgetos-web-os",
+        destination: "/projects/gadgetos",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
@@ -16,15 +24,5 @@ const baseConfig: NextConfig = {
     ],
   },
 };
-
-// `next build` wipes the dist dir, which deletes `static/development/` out from
-// under a running `next dev`. The dev server only creates that folder at
-// startup, so every later edit fails with
-// `ENOENT ... static/development/_buildManifest.js.tmp.<random>`.
-// Keeping dev on its own dist dir makes the two safe to run side by side.
-const nextConfig = (phase: string): NextConfig => ({
-  ...baseConfig,
-  distDir: phase === PHASE_DEVELOPMENT_SERVER ? ".next-dev" : ".next",
-});
 
 export default nextConfig;

@@ -18,19 +18,17 @@ const Hero = () => {
       <div className="w-full md:w-3/4 lg:w-2/3 flex flex-col justify-center items-center gap-6 text-center px-6">
         {/* Title */}
         <h1 className="text-4xl md:text-5xl font-semibold leading-tight">
-          Hello, I am{" "}
           <span className="bg-gradient-to-r from-[#f97316] to-[#9b4819] bg-clip-text text-transparent">
             Hitesh Solanki
           </span>
-          !
+          {" "}— Software Engineer &amp; AI Builder
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl text-gray-600 max-w-4xl leading-relaxed">
-          I believe in building meaningful products through clarity, ownership,
-          and strong execution. I love breaking down complex challenges,
-          designing simple solutions, and using technology as a multiplier for
-          business growth.
+          I build AI agents, backend systems, and full-stack web apps in Mumbai,
+          India. My work spans Go services, Next.js interfaces, and Python tools
+          that connect language models to real products.
         </p>
 
         {/* CTA Button */}

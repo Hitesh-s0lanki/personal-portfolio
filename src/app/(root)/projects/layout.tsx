@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Projects",
+  title: "AI & Full-Stack Projects",
   description:
-    "A collection of projects by Hitesh Solanki spanning full-stack web apps, AI agent systems, and cloud infrastructure — built with Next.js, TypeScript, Go, Python, and LangChain.",
+    "Explore Hitesh Solanki's AI agents, full-stack apps, and backend systems, with source code, demos, and documentation for Next.js, Go, and Python projects.",
   path: "/projects",
   eyebrow: "Work",
   keywords: [

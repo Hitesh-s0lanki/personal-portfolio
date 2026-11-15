@@ -3,6 +3,7 @@ import SectionEyebrow from "@/components/section-eyebrow";
 import { featuredProjects, projectData } from "@/lib/data";
 import { absoluteUrl, breadcrumbJsonLd } from "@/lib/seo";
 import ProjectsExplorer from "./_components/projects-explorer";
+import Link from "next/link";
 
 const projectsJsonLd = {
   "@context": "https://schema.org",
@@ -14,7 +15,7 @@ const projectsJsonLd = {
   mainEntity: {
     "@type": "ItemList",
     numberOfItems: projectData.length,
-    itemListElement: projectData.slice(0, 20).map((project, index) => ({
+    itemListElement: projectData.map((project, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: project.name,
@@ -38,11 +39,11 @@ const stats = [
 
 /**
  * Server-rendered shell: header and structured data ship as static HTML, and
- * only the interactive browsing (search, filters, layout, paging) is a client
+ * only the interactive browsing (search, filters, layout) is a client
  * island.
  */
 const ProjectsPage = () => (
-  <div className="min-h-screen w-full">
+  <main className="min-h-screen w-full">
     <JsonLd
       data={[
         projectsJsonLd,
@@ -57,13 +58,19 @@ const ProjectsPage = () => (
       <div className="flex flex-col items-center gap-4 text-center">
         <SectionEyebrow>All Projects</SectionEyebrow>
         <h1 className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl md:text-5xl">
-          Ideas <span className="text-[#9b4819]">in Flight</span>
+          AI &amp; <span className="text-[#9b4819]">Full-Stack Projects</span>
         </h1>
         <p className="max-w-xl text-sm text-gray-500 md:text-base">
           Everything I&apos;ve shipped across full-stack web, AI agents, and
           cloud infrastructure. Search it, or filter by the stack you care
           about.
         </p>
+        <Link
+          href="/projects/relivo"
+          className="text-sm font-medium text-[#9b4819] underline underline-offset-4"
+        >
+          Read the Relivo AI platform case study
+        </Link>
 
         <dl className="mt-2 flex items-center gap-6 sm:gap-10">
           {stats.map((stat) => (
@@ -86,7 +93,7 @@ const ProjectsPage = () => (
     <div className="mx-auto w-full max-w-6xl px-5 pb-4 md:px-8 lg:px-10">
       <div className="h-[0.5px] w-full bg-[#BDBDBD]" />
     </div>
-  </div>
+  </main>
 );
 
 export default ProjectsPage;

@@ -5,7 +5,7 @@ import { absoluteUrl, breadcrumbJsonLd, buildMetadata, siteConfig } from "@/lib/
 export const metadata: Metadata = buildMetadata({
   title: "Contact",
   description:
-    "Get in touch with Hitesh Solanki about roles, freelance work, or collaboration on full-stack and AI engineering projects.",
+    "Contact Hitesh Solanki, a software engineer in Mumbai, about engineering roles, freelance projects, or collaboration on full-stack apps and AI systems.",
   path: "/contact",
   eyebrow: "Get in touch",
   keywords: [

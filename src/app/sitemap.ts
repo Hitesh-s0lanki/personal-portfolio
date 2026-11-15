@@ -26,12 +26,9 @@ const projectRoutes: Route[] = projectData.map((project) => ({
 }));
 
 const sitemap = (): MetadataRoute.Sitemap => {
-  const lastModified = new Date();
-
   return [...staticRoutes, ...projectRoutes].map(
     ({ path, changeFrequency, priority }) => ({
       url: absoluteUrl(path),
-      lastModified,
       changeFrequency,
       priority,
     }),

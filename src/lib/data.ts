@@ -3,6 +3,7 @@ import { Project, Certificate, Blog } from "@/type";
 export const projectData: Project[] = [
   {
     id: "system-arch",
+    seoDescription: "SystemArch combines a Next.js control panel, Go rate limiting with RAM or Redis storage, Docker-based k6 load tests, and a video streaming service.",
     name: "SystemArch",
     tagline: "System design workbench",
     description:
@@ -24,6 +25,7 @@ export const projectData: Project[] = [
   },
   {
     id: "veyra",
+    seoDescription: "Veyra generates videos from text or images using FastAPI and Modal GPU workers, with private results in S3 and an MCP server for agent integrations.",
     name: "Veyra",
     tagline: "AI video generation platform",
     description:
@@ -48,6 +50,7 @@ export const projectData: Project[] = [
   },
   {
     id: "klyro",
+    seoDescription: "Klyro is a Rust database with Redis RESP support, transactions, pub/sub, persistence, and keyword, vector, and hybrid search in the same keyspace.",
     name: "Klyro",
     tagline: "Redis-compatible in-memory database",
     description:
@@ -72,6 +75,7 @@ export const projectData: Project[] = [
   },
   {
     id: "vec-voice-ai",
+    seoDescription: "Vec uses Sarvam AI for speech and OpenAI for replies. Its connectors let users supply their own vector store, dataset, or tool for voice conversations.",
     name: "Vec",
     tagline: "Speak, and be answered out loud",
     description:
@@ -98,6 +102,7 @@ export const projectData: Project[] = [
   },
   {
     id: "dioramic",
+    seoDescription: "Dioramic turns uploaded photos into textured 3D meshes using open-source models on Modal, with files in Vercel Blob and runs tracked in Neon Postgres.",
     name: "Dioramic",
     tagline: "Turn a photo into a 3D mesh",
     description:
@@ -123,6 +128,7 @@ export const projectData: Project[] = [
   },
   {
     id: "relivo-mcp-server",
+    seoDescription: "Relivo MCP Server mounts memory, skills, events, Search Console, and Product Hunt tools on a Go HTTP server, with API keys and a Clerk dashboard.",
     name: "Relivo MCP Server",
     tagline: "Multi-namespace MCP server in Go",
     description:
@@ -147,6 +153,7 @@ export const projectData: Project[] = [
   },
   {
     id: "rumiva",
+    seoDescription: "Rumiva is a 3D interior design studio built for a web hackathon, with a React Three Fiber room, designer portfolios, galleries, and GSAP animations.",
     name: "Rumiva",
     tagline: "Immersive 3D interior design studio",
     description:
@@ -168,6 +175,7 @@ export const projectData: Project[] = [
   },
   {
     id: "mindboard-arena",
+    seoDescription: "MindBoard Arena lets humans and language-model agents play chess, with human-vs-agent and agent-vs-agent modes, saved games, move histories, and logs.",
     name: "MindBoard Arena",
     tagline: "LLM agents play real chess",
     description:
@@ -212,6 +220,7 @@ export const projectData: Project[] = [
   },
   {
     id: "resonance",
+    seoDescription: "Resonance supports text-to-speech and voice cloning for organisations, with custom voice uploads, browser recording, a voice library, and metered billing.",
     name: "Resonance",
     tagline: "Text-to-speech and voice cloning",
     description:
@@ -234,6 +243,7 @@ export const projectData: Project[] = [
   },
   {
     id: "gadgetos",
+    seoDescription: "GadgetOS brings a macOS-style desktop to the browser, with AI file management and natural-language terminal commands using Next.js, Convex, and OpenAI.",
     name: "GadgetOS",
     tagline: "AI operating system in browser",
     description:
@@ -326,6 +336,7 @@ export const projectData: Project[] = [
   },
   {
     id: "sprintplanner",
+    seoDescription: "SprintPlanner turns startup ideas into four-week execution plans. The Next.js and PostgreSQL project includes a live demo and source repository.",
     name: "SprintPlanner",
     tagline: "Ideas into four-week ventures",
     description: "Turning your ideas into executable 4-week ventures.",
@@ -343,6 +354,7 @@ export const projectData: Project[] = [
   },
   {
     id: "ticksy-booking-app",
+    seoDescription: "Ticksy handles event and concert bookings with Spring Boot services, Python, Razorpay payments, and LangChain. The project includes source and documentation.",
     name: "Ticksy Booking App",
     tagline: "Event ticketing and booking system",
     description:
@@ -363,6 +375,7 @@ export const projectData: Project[] = [
   },
   {
     id: "cooksy",
+    seoDescription: "Cooksy turns pantry ingredients into recipes with step-by-step instructions, dish images, and YouTube tutorials using Next.js, FastAPI, and OpenAI.",
     name: "Cooksy",
     tagline: "AI sous-chef for your pantry",
     description:
@@ -383,6 +396,7 @@ export const projectData: Project[] = [
   },
   {
     id: "crewai-example",
+    seoDescription: "This CrewAI project connects collaborating AI agents to a FastAPI backend and Next.js frontend, with streaming responses and multiple language models.",
     name: "CrewAI Example",
     tagline: "Multi-agent reasoning with CrewAI",
     description:
@@ -405,6 +419,7 @@ export const projectData: Project[] = [
   },
   {
     id: "shopify-hydrogen-storefront",
+    seoDescription: "A client storefront built with Shopify Hydrogen, React, TypeScript, and Tailwind CSS, with a live demo, source code, and project documentation.",
     name: "Shopify Hydrogen Storefront",
     tagline: "Shopify Hydrogen storefront for client",
     description: "A Shopify Hydrogen app for a client.",
@@ -422,6 +437,7 @@ export const projectData: Project[] = [
   },
   {
     id: "agentic-blog-generator",
+    seoDescription: "An AI blog generator built around an agent workflow graph, with Next.js for the frontend, FastAPI for the backend, and OpenAI for text generation.",
     name: "Agentic Blog Generator",
     tagline: "Blogs written by agent workflows",
     description: "AI-generated blogs via an “agentic” workflow graph.",
@@ -483,6 +499,7 @@ export const projectData: Project[] = [
   },
   {
     id: "webinar-ai",
+    seoDescription: "Webinar AI uses AI agents to create, manage, and automate webinars. Its stack includes Next.js, Stream, OpenAI, and Vapi AI for voice interactions.",
     name: "Webinar AI",
     tagline: "AI webinars that convert leads",
     description:
@@ -502,6 +519,7 @@ export const projectData: Project[] = [
   },
   {
     id: "react-agent",
+    seoDescription: "A Python ReAct agent built with LangChain uses Arxiv, Wikipedia, and Tavily to search, reason, and answer queries. Source code and a live demo are linked.",
     name: "ReAct Agent ",
     tagline: "ReAct agent with real tools",
     description:
@@ -551,17 +569,6 @@ export const projectData: Project[] = [
     github: "https://github.com/Hitesh-s0lanki/space-on-hire",
     demo: "https://space-on-hire.vercel.app/",
     ribbon: "New",
-  },
-  {
-    id: "gadgetos-web-os",
-    name: "GadgetOS",
-    tagline: "Desktop experience inside the browser",
-    description:
-      "Browser-based operating system built to simulate a desktop-like experience entirely within your browser.",
-    image: "/projects/gadgetOS.png",
-    technologies: ["Nextjs", "Convex", "Real-time", "terminal", "openai", "ai"],
-    github: "https://github.com/Hitesh-s0lanki/gadgetOS/tree/web_os",
-    demo: "https://gadget-os-app.vercel.app/",
   },
   {
     id: "kya-banana-hai",
@@ -674,11 +681,13 @@ export const projectData: Project[] = [
       "Spring Boot",
       "Spring MVC",
       "Java",
-      "Shadcn",
+      "HTML",
+      "CSS",
+      "JavaScript",
       "Gemini",
       "Chrome Extension",
     ],
-    github: "https://github.com/Hitesh-s0lanki/research-assistant-chromer",
+    github: "https://github.com/Hitesh-s0lanki/research-assistant-chrome",
   },
   {
     id: "inventory-management",
@@ -726,6 +735,7 @@ export const projectData: Project[] = [
   },
   {
     id: "chess-web",
+    seoDescription: "Chess Web is an HTML, CSS, and JavaScript chess game with a board, player panels, move counts, and scores. Includes an overview, source, and a live demo.",
     name: "Chess Web",
     tagline: "Chess built with vanilla JavaScript",
     description: "Chess game built using HTML, CSS, and JavaScript.",
@@ -736,6 +746,7 @@ export const projectData: Project[] = [
   },
   {
     id: "storeit",
+    seoDescription: "StoreIt recreates core Google Drive file storage features with Next.js and Appwrite. The project page includes documentation, source code, and a live demo.",
     name: "StoreIt",
     tagline: "Cloud file storage, Drive-style",
     description:
@@ -758,6 +769,7 @@ export const projectData: Project[] = [
   },
   {
     id: "todovex",
+    seoDescription: "Todovex is an AI task management app built with Next.js, Convex, and OpenAI, deployed on Vercel. The project includes documentation and a live demo.",
     name: "Todovex",
     tagline: "AI-powered task management app",
     description: "AI-powered task management app.",
@@ -771,13 +783,15 @@ export const projectData: Project[] = [
     id: "26ideas",
     name: "26ideas",
     tagline: "Company website for 26ideas",
-    description: "Company Oriented",
+    description:
+      "Company website for 26ideas, built with Next.js as a static web project. Explore the project overview, technology stack, and link to the company site.",
     image: "/projects/26ideas.png",
     technologies: ["Nextjs", "static", "26ideas"],
     demo: "https://www.26ideas.com/",
   },
   {
     id: "data-structures",
+    seoDescription: "Data structure implementations and LeetCode solutions covering arrays, graphs, linked lists, trees, binary search trees, sorting, and backtracking.",
     name: "Data Structure",
     tagline: "Data structures and LeetCode solutions",
     description:
@@ -788,6 +802,7 @@ export const projectData: Project[] = [
   },
   {
     id: "terraform-iaac",
+    seoDescription: "A Terraform project for provisioning AWS infrastructure, with GitHub Actions in its stack. The repository documents its VPC and EKS setup.",
     name: "Terraform IAAC",
     tagline: "Terraform IaC for AWS provisioning",
     description: "Terraform IaC framework for automated AWS provisioning.",

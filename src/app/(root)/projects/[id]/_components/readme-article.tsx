@@ -1,6 +1,7 @@
 "use client";
 
 import Markdown from "react-markdown";
+import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 
 interface ReadmeArticleProps {
@@ -19,11 +20,12 @@ const isRelative = (href?: string) =>
  * on GitHub.
  */
 const ReadmeArticle = ({ content, rawBase, blobBase }: ReadmeArticleProps) => (
-  <div className="text-[15px] leading-8 text-[#4f4a44]">
+  <div className="text-[15px] leading-8 text-[#4f4a44] [overflow-wrap:anywhere]">
     <Markdown
       // READMEs are written for GitHub, so they lean on GFM — tables,
       // strikethrough, task lists. Without this they render as raw pipes.
       remarkPlugins={[remarkGfm]}
+      rehypePlugins={[[rehypeSlug, { prefix: "readme-" }]]}
       components={{
         h1: (props) => (
           <h2
@@ -59,20 +61,25 @@ const ReadmeArticle = ({ content, rawBase, blobBase }: ReadmeArticleProps) => (
         a: ({ href, ...props }) => (
           <a
             {...props}
-            href={isRelative(href) ? `${blobBase}${href}` : href}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={href?.startsWith("#") ? `#readme-${href.slice(1)}` : isRelative(href) ? `${blobBase}${href}` : href}
+            target={href?.startsWith("#") ? undefined : "_blank"}
+            rel={href?.startsWith("#") ? undefined : "noopener noreferrer"}
             className="text-[#9b4819] underline underline-offset-2 hover:text-[#7a3914]"
           />
         ),
         img: ({ src, alt }) => {
           const url = typeof src === "string" ? src : "";
+          // GitHub blob URLs serve an HTML viewer, not an image response.
+          const imageUrl = url.replace(
+            /^https:\/\/github\.com\/([^/]+)\/([^/]+)\/blob\//,
+            "https://raw.githubusercontent.com/$1/$2/",
+          );
           return (
             // README images are arbitrary remote URLs (badges, gifs) that
             // next/image would need every host allow-listed for.
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={isRelative(url) ? `${rawBase}${url}` : url}
+              src={isRelative(imageUrl) ? `${rawBase}${imageUrl}` : imageUrl}
               alt={alt ?? ""}
               loading="lazy"
               className="my-5 inline-block h-auto max-w-full rounded-md"

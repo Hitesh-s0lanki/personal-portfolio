@@ -19,7 +19,9 @@ const normalizeJsonLd = (data: Props["data"]) => {
 const JsonLd = ({ data }: Props) => (
   <script
     type="application/ld+json"
-    dangerouslySetInnerHTML={{ __html: JSON.stringify(normalizeJsonLd(data)) }}
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(normalizeJsonLd(data)).replace(/</g, "\\u003c"),
+    }}
   />
 );
 

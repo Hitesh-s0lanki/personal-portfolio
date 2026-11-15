@@ -1,6 +1,7 @@
 import JsonLd from "@/components/json-ld";
 import { Button } from "@/components/ui/button";
 import { getProjectById, getRelatedProjects, projectData } from "@/lib/data";
+import { projectOverviews } from "@/lib/project-overviews";
 import {
   getProjectReadme,
   rawContentBase,
@@ -37,7 +38,7 @@ export const generateMetadata = async ({
 
   return buildMetadata({
     title: project.name,
-    description: project.description,
+    description: project.seoDescription ?? project.description,
     path: `/projects/${project.id}`,
     eyebrow: "Project",
     keywords: [project.name, ...project.technologies, "Hitesh Solanki"],
@@ -52,6 +53,7 @@ const ProjectPage = async ({ params }: Props) => {
 
   const readme = await getProjectReadme(project.github);
   const related = getRelatedProjects(project);
+  const overview = projectOverviews[project.id];
   const isInternalDemo = project.demo?.startsWith("/");
 
   const projectJsonLd = {
@@ -167,6 +169,21 @@ const ProjectPage = async ({ params }: Props) => {
       {/* Body */}
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-12 md:px-8 lg:grid-cols-[1fr_260px] lg:px-10 lg:py-16">
         <div className="min-w-0">
+          {overview && (
+            <section aria-labelledby="project-overview" className="mb-10 space-y-6">
+              <h2 id="project-overview" className="text-2xl font-medium text-[#1f1f1f]">
+                Project overview
+              </h2>
+              {overview.map((section) => (
+                <div key={section.heading}>
+                  <h3 className="mb-2 text-lg font-semibold text-[#25221f]">
+                    {section.heading}
+                  </h3>
+                  <p className="text-base leading-8 text-[#5f5b55]">{section.body}</p>
+                </div>
+              ))}
+            </section>
+          )}
           {readme ? (
             <>
               <p className="mb-6 text-sm font-semibold uppercase tracking-[0.14em] text-[#9b4819]">
@@ -178,7 +195,7 @@ const ProjectPage = async ({ params }: Props) => {
                 blobBase={repoBlobBase(readme.repo)}
               />
             </>
-          ) : (
+          ) : !overview ? (
             <div className="rounded-lg border border-dashed border-black/15 bg-white/60 p-8">
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#9b4819]">
                 Documentation
@@ -206,7 +223,7 @@ const ProjectPage = async ({ params }: Props) => {
                 </Button>
               )}
             </div>
-          )}
+          ) : null}
         </div>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">

@@ -15,9 +15,9 @@ import { certificates } from "@/lib/data";
 import styles from "./resume.module.css";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Resume",
+  title: "Software Engineer Resume",
   description:
-    "Resume of Hitesh Solanki — software engineer building AI agents, backend systems, and full-stack products.",
+    "View Hitesh Solanki's software engineering experience, AI and backend projects, technical skills, education, and certifications in his online resume.",
   path: "/resume",
   eyebrow: "Resume",
 });

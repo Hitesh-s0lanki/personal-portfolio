@@ -12,16 +12,12 @@
 export const projectOverviews: Record<string, { heading: string; body: string }[]> = {
   "system-arch": [
     {
-      heading: "A workbench for system design",
-      body: "SystemArch puts rate limiting, load testing, and video streaming in one project. A Next.js frontend provides the interface for exploring the services, while Go handles the rate limiter and load-testing backend.",
+      heading: "Distributed rate limiting",
+      body: "This project covers the rate limiter within SystemArch. A Next.js frontend provides the interface, while Go handles the rate limiter and load-testing backend. The live demo opens the rate limiter directly.",
     },
     {
       heading: "Rate limits and load tests",
       body: "The rate limiter can use process memory or Redis. The load tester runs k6 in Docker containers against a target endpoint, making the repository a place to examine request limits alongside load-test results.",
-    },
-    {
-      heading: "Video delivery",
-      body: "A separate Spring Boot service uses FFmpeg to turn uploaded MP4 files into HLS renditions. The repository includes the service code and setup instructions for running each part locally.",
     },
   ],
   "research-assistant-chrome-extension": [

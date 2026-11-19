@@ -2,12 +2,39 @@ import { Project, Certificate, Blog } from "@/type";
 
 export const projectData: Project[] = [
   {
-    id: "system-arch",
-    seoDescription: "SystemArch combines a Next.js control panel, Go rate limiting with RAM or Redis storage, Docker-based k6 load tests, and a video streaming service.",
-    name: "SystemArch",
-    tagline: "System design workbench",
+    id: "enterprise-rag-system",
+    name: "Enterprise RAG System",
+    tagline: "Permission-aware IT support copilot",
+    seoDescription: "An IT support copilot with permission-aware hybrid search, evidence grading, public web research, and controlled document updates.",
     description:
-      "System design workbench with a Next.js frontend, a distributed rate limiter in Go with RAM or Redis storage, a Docker-based k6 load tester, and a video streaming service.",
+      "IT support knowledge copilot built with Python, LangChain, and Streamlit. Combines permission-aware dense and BM25 search in Pinecone, evidence grading with Jev, retrieval report reuse with Mem0, optional Firecrawl web research, and revision-controlled document updates.",
+    image:
+      "https://raw.githubusercontent.com/Hitesh-s0lanki/enterprise-rag-system/main/docs/diagrams/architecture.png",
+    technologies: [
+      "Python",
+      "LangChain",
+      "Pinecone",
+      "Streamlit",
+      "OpenAI",
+      "RAG",
+      "Mem0",
+      "Firecrawl",
+      "MCP",
+      "SQLite",
+      "Jev",
+    ],
+    github: "https://github.com/Hitesh-s0lanki/enterprise-rag-system",
+    demo: "https://erg-hitesh-s0lanki.streamlit.app/",
+    ribbon: "New",
+    featured: true,
+  },
+  {
+    id: "system-arch",
+    seoDescription: "A distributed rate limiter in Go with RAM or Redis storage, a Next.js frontend, and Docker-based k6 load tests.",
+    name: "Rate Limiter",
+    tagline: "Distributed rate limiter in Go",
+    description:
+      "A distributed rate limiter in Go with RAM or Redis storage, a Next.js frontend, and a Docker-based k6 load tester.",
     image:
       "https://raw.githubusercontent.com/Hitesh-s0lanki/system-arch/main/frontend/public/logo.png",
     technologies: [
@@ -20,7 +47,7 @@ export const projectData: Project[] = [
       "k6",
     ],
     github: "https://github.com/Hitesh-s0lanki/system-arch",
-    demo: "https://system-arch-bice.vercel.app",
+    demo: "https://system-arch-bice.vercel.app/system-design/rate-limiter",
     ribbon: "New",
   },
   {
